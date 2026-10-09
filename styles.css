@@ -3121,6 +3121,46 @@ button {
   transform: translateY(-3px);
 }
 
+.footer-dev-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  transition: transform var(--transition-fast), background var(--transition-fast), opacity var(--transition-fast);
+  opacity: 0.9;
+}
+.footer-dev-credit span {
+  color: #38bdf8;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(245, 158, 11, 0.45);
+  transition: color var(--transition-fast);
+}
+.footer-dev-credit strong {
+  color: #67e8f9;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-shadow: 1px 1px 0 rgba(245, 158, 11, 0.55);
+  transition: color var(--transition-fast), text-shadow var(--transition-fast);
+}
+.footer-dev-credit:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  background: rgba(56, 189, 248, 0.07);
+}
+.footer-dev-credit:hover span {
+  color: #7dd3fc;
+}
+.footer-dev-credit:hover strong {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.8), 1px 1px 0 rgba(245, 158, 11, 0.7);
+}
+
 @media (max-width: 990px) {
   .footer-main-grid {
     grid-template-columns: 1fr 1fr;
@@ -3129,6 +3169,12 @@ button {
 @media (max-width: 600px) {
   .footer-main-grid {
     grid-template-columns: 1fr;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    align-items: center;
   }
 }
 
