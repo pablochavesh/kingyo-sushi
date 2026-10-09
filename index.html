@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet" />
     
-    <link rel="stylesheet" href="styles.css?v=1.5" />
+    <link rel="stylesheet" href="styles.css?v=1.6" />
     <title>Kingyo Sushi & Fusión | Experiencia Gastronómica Japonesa</title>
   </head>
   <body>
@@ -243,19 +243,65 @@
       <!-- JAPANESE BRUSHSTROKE CALLIGRAPHY BANNER -->
       <section class="kanji-banner" aria-label="Lema de la casa">
         <div class="banner-track">
-          <div class="banner-content">
-            <span class="kanji-large">刺身</span>
-            <span class="kanji-text" data-i18n="ribbon1">SASHIMI FRESCO</span>
-            <span class="kanji-sep">◆</span>
-            <span class="kanji-large">伝統</span>
-            <span class="kanji-text" data-i18n="ribbon2">TRADICIÓN MILENARIA</span>
-            <span class="kanji-sep">◆</span>
-            <span class="kanji-large">融合</span>
-            <span class="kanji-text" data-i18n="ribbon3">FUSIÓN CONTEMPORÁNEA</span>
-            <span class="kanji-sep">◆</span>
-            <span class="kanji-large">金魚</span>
-            <span class="kanji-text" data-i18n="ribbon4">CALIDAD · SABOR · TRADICIÓN</span>
-            <span class="kanji-sep">◆</span>
+          <div class="banner-group">
+            <div class="banner-content">
+              <span class="kanji-large">刺身</span>
+              <span class="kanji-text" data-i18n="ribbon1">SASHIMI FRESCO</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">伝統</span>
+              <span class="kanji-text" data-i18n="ribbon2">TRADICIÓN MILENARIA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">融合</span>
+              <span class="kanji-text" data-i18n="ribbon3">FUSIÓN CONTEMPORÁNEA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">金魚</span>
+              <span class="kanji-text" data-i18n="ribbon4">CALIDAD · SABOR · TRADICIÓN</span>
+              <span class="kanji-sep">◆</span>
+            </div>
+            <div class="banner-content">
+              <span class="kanji-large">刺身</span>
+              <span class="kanji-text" data-i18n="ribbon1">SASHIMI FRESCO</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">伝統</span>
+              <span class="kanji-text" data-i18n="ribbon2">TRADICIÓN MILENARIA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">融合</span>
+              <span class="kanji-text" data-i18n="ribbon3">FUSIÓN CONTEMPORÁNEA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">金魚</span>
+              <span class="kanji-text" data-i18n="ribbon4">CALIDAD · SABOR · TRADICIÓN</span>
+              <span class="kanji-sep">◆</span>
+            </div>
+          </div>
+          <div class="banner-group" aria-hidden="true">
+            <div class="banner-content">
+              <span class="kanji-large">刺身</span>
+              <span class="kanji-text" data-i18n="ribbon1">SASHIMI FRESCO</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">伝統</span>
+              <span class="kanji-text" data-i18n="ribbon2">TRADICIÓN MILENARIA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">融合</span>
+              <span class="kanji-text" data-i18n="ribbon3">FUSIÓN CONTEMPORÁNEA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">金魚</span>
+              <span class="kanji-text" data-i18n="ribbon4">CALIDAD · SABOR · TRADICIÓN</span>
+              <span class="kanji-sep">◆</span>
+            </div>
+            <div class="banner-content">
+              <span class="kanji-large">刺身</span>
+              <span class="kanji-text" data-i18n="ribbon1">SASHIMI FRESCO</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">伝統</span>
+              <span class="kanji-text" data-i18n="ribbon2">TRADICIÓN MILENARIA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">融合</span>
+              <span class="kanji-text" data-i18n="ribbon3">FUSIÓN CONTEMPORÁNEA</span>
+              <span class="kanji-sep">◆</span>
+              <span class="kanji-large">金魚</span>
+              <span class="kanji-text" data-i18n="ribbon4">CALIDAD · SABOR · TRADICIÓN</span>
+              <span class="kanji-sep">◆</span>
+            </div>
           </div>
         </div>
       </section>
@@ -1122,12 +1168,20 @@
       </div>
     </footer>
 
+    <!-- FLOATING BACK TO TOP BUTTON (BOTTOM-LEFT) -->
+    <button class="floating-back-to-top" id="floating-back-to-top" type="button" aria-label="Volver al principio" title="Volver al principio">
+      <svg class="back-top-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+      <span class="back-top-text" data-i18n="backToTopShort">Subir</span>
+    </button>
+
     <!-- Libraries: Lenis for Smooth Scroll, GSAP for Motion -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     
     <!-- Application Logic -->
-    <script src="app.js?v=1.2"></script>
+    <script src="app.js?v=1.4"></script>
   </body>
 </html>

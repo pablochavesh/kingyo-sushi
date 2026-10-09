@@ -418,7 +418,8 @@ const i18nDict = {
     roll1Title: "Sake Volcano Roll",
     roll2Title: "Godzilla Roll",
     roll3Title: "Spicy Ika Roll",
-    roll4Title: "Volcano de Kanikama"
+    roll4Title: "Volcano de Kanikama",
+    backToTopShort: "Subir"
   },
   en: {
     skip: "Skip to content",
@@ -584,7 +585,8 @@ const i18nDict = {
     roll1Title: "Sake Volcano Roll",
     roll2Title: "Godzilla Roll",
     roll3Title: "Spicy Ika Roll",
-    roll4Title: "Kanikama Volcano Roll"
+    roll4Title: "Kanikama Volcano Roll",
+    backToTopShort: "Top"
   }
 };
 
@@ -1158,14 +1160,19 @@ document.addEventListener("DOMContentLoaded", () => {
   renderDigitalMenu();
   renderCartDrawer();
 
-  // Header Scroll Effect
+  // Header & Floating Back to Top Scroll Effect
+  const floatingTopBtn = document.querySelector("#floating-back-to-top");
   window.addEventListener("scroll", () => {
     const header = document.querySelector(".site-header");
     if (header) {
       if (window.scrollY > 40) header.classList.add("scrolled");
       else header.classList.remove("scrolled");
     }
-  });
+    if (floatingTopBtn) {
+      if (window.scrollY > 350) floatingTopBtn.classList.add("visible");
+      else floatingTopBtn.classList.remove("visible");
+    }
+  }, { passive: true });
 
   // Scroll to Page Top (Lenis & Native support)
   function scrollToPageTop() {
@@ -1176,8 +1183,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Back to Top Button
+  // Back to Top Buttons
   document.querySelector("#back-to-top")?.addEventListener("click", e => {
+    e.preventDefault();
+    scrollToPageTop();
+  });
+  floatingTopBtn?.addEventListener("click", e => {
     e.preventDefault();
     scrollToPageTop();
   });
