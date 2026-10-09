@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anatomía del Roll · Prototipo Kingyo</title>
+  <title>Anatomía del Roll · Kingyo Sushi &amp; Fusión</title>
+  <meta name="description" content="Demo interactiva: recorre un Acevichado Roll de Kingyo capa por capa." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="Anatomía del Roll · Kingyo Sushi & Fusión" />
+  <meta property="og:description" content="Demo interactiva de animación con scroll." />
+  <meta property="og:image" content="img/acevichado-roll.jpg" />
+  <link rel="icon" type="image/jpeg" href="img/sello-kingyo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet" />
@@ -31,16 +37,31 @@
 
     #dust { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
 
-    .proto-bar {
+    /* Cabecera de marca (mismo tratamiento que el header del sitio) */
+    .demo-header {
       position: fixed; top: 0; inset-inline: 0; z-index: 20;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 12px 24px; font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
-      color: var(--text-muted); background: rgba(8, 7, 6, .82); border-bottom: 1px solid var(--gold-line);
-      backdrop-filter: blur(8px);
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      min-height: 68px; padding: 0 clamp(16px, 4vw, 48px);
+      background: rgba(8, 7, 6, .86); border-bottom: 1px solid var(--gold-line);
+      backdrop-filter: blur(10px);
     }
-    .proto-bar b { color: var(--gold-primary); font-weight: 600; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-seal { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--gold-primary); box-shadow: 0 0 12px rgba(214, 173, 88, .25); }
+    .brand-letters { height: 30px; width: auto; }
+    .demo-badge {
+      font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-light);
+      padding: 8px 14px; border: 1px solid var(--gold-line); border-radius: 999px; background: rgba(214, 173, 88, .06);
+    }
+    .demo-badge .jp { font-family: var(--font-jp); color: var(--vermilion); margin-right: 8px; letter-spacing: .1em; }
 
-    .spacer { position: relative; z-index: 1; min-height: 90vh; display: grid; place-content: center; text-align: center; padding: 96px 16px; }
+    .spacer { position: relative; z-index: 1; min-height: 90vh; display: grid; place-content: center; justify-items: center; text-align: center; padding: 110px 16px 96px; }
+    .spacer__logo {
+      width: min(300px, 70vw); height: auto; margin-bottom: 28px;
+      filter: drop-shadow(0 0 1px rgba(255,255,255,.85)) drop-shadow(0 0 3px rgba(214,173,88,.45)) drop-shadow(0 4px 14px rgba(0,0,0,.85));
+    }
+    .spacer__seal { width: 64px; height: 64px; border-radius: 50%; border: 1.5px solid var(--gold-primary); box-shadow: 0 0 20px rgba(214,173,88,.3); margin-bottom: 22px; }
+    .spacer p.eyebrow { margin-top: 0; font-family: var(--font-sans); font-style: normal; font-size: 11px; color: var(--vermilion); }
+    .spacer p.spacer__meta { margin-top: 28px; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--text-faint); font-family: var(--font-sans); font-style: normal; }
     .spacer .eyebrow { margin-bottom: 18px; }
     .spacer h1 { font-family: var(--font-serif); font-weight: 600; font-size: clamp(40px, 6vw, 84px); line-height: 1; }
     .spacer h1 em { color: var(--gold-light); font-style: italic; }
@@ -148,7 +169,9 @@
     .progress span { display: block; height: 100%; width: 100%; transform-origin: left; transform: scaleX(0); background: linear-gradient(90deg, var(--vermilion), var(--gold-light)); }
 
     @media (max-width: 860px) {
-      .anatomy__pin { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-content: start; padding: 60px 16px 28px; gap: 18px; }
+      .anatomy__pin { grid-template-columns: 1fr; grid-template-rows: auto auto; align-content: center; padding: 84px 16px 36px; gap: 22px; }
+      .demo-header { min-height: 60px; }
+      .brand-letters { height: 26px; }
       .stage { order: -1; max-width: min(100%, 52vh); }
       .anatomy__title { display: none; }
       .steps li { display: none; }
@@ -170,10 +193,17 @@
 <body>
   <canvas id="dust" aria-hidden="true"></canvas>
 
-  <div class="proto-bar"><span><b>Prototipo</b> · Animación scroll — Anatomía del roll</span><span>No integrado al sitio</span></div>
+  <header class="demo-header">
+    <div class="brand">
+      <img class="brand-seal" src="img/sello-kingyo.jpg" alt="" width="42" height="42" />
+      <img class="brand-letters" src="img/kingyo-letras.png" alt="Kingyo Sushi & Fusión" height="30" />
+    </div>
+    <span class="demo-badge"><span class="jp">試作</span>Demo</span>
+  </header>
 
   <section class="spacer">
-    <p class="eyebrow"><span class="jp">金魚</span>Kingyo Sushi &amp; Fusión</p>
+    <img class="spacer__logo" src="img/kingyo-logo.png" alt="" />
+    <p class="eyebrow"><span class="jp">解剖</span>Anatomía de un roll</p>
     <h1>Lo que hay <em>dentro</em><br />de cada pieza.</h1>
     <p>Desliza y recorre un Acevichado Roll, capa por capa.</p>
     <div class="scroll-cue">DESLIZAR</div>
@@ -203,7 +233,7 @@
       </div>
 
       <div class="stage" aria-label="Fotografía del Acevichado Roll de Kingyo, recorrida con zoom capa por capa">
-        <img class="stage__img" src="../assets/real-acevichado-roll.jpg" alt="Acevichado Roll: corte lateral con pescado sellado, arroz, nori, camarón tempura y aguacate, cubierto de salsas e hilos crocantes" />
+        <img class="stage__img" src="img/acevichado-roll.jpg" alt="Acevichado Roll: corte lateral con pescado sellado, arroz, nori, camarón tempura y aguacate, cubierto de salsas e hilos crocantes" />
         <div class="stage__tone"></div>
         <div class="stage__sheen"></div>
         <div class="stage__spot"></div>
@@ -221,9 +251,11 @@
   </section>
 
   <section class="spacer">
-    <p class="eyebrow">Fin del prototipo</p>
-    <h1>Aquí <em>continuaría</em><br />Especialidades.</h1>
-    <p>Pensado para ir entre el Hero y “Elige tu roll”.</p>
+    <img class="spacer__seal" src="img/sello-kingyo.jpg" alt="" width="64" height="64" />
+    <p class="eyebrow"><span class="jp">金魚</span>Kingyo Sushi &amp; Fusión</p>
+    <h1>Calidad, sabor<br /><em>y tradición.</em></h1>
+    <p>Pérez Zeledón &amp; Bijagua, Costa Rica.</p>
+    <p class="spacer__meta">Demo de concepto · animación con scroll</p>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
