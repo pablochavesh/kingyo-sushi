@@ -9,184 +9,244 @@
    ========================================================================== */
 const menuData = [
   {
-    id: "torre",
+    id: "acevichado-roll",
+    code: "ROL-01",
+    portions: "8 piezas",
+    category: ["uramaki", "specialties"],
+    name: { es: "Acevichado Roll 🔥", en: "Acevichado Roll 🔥" },
+    jp: "セビチェ巻",
+    description: {
+      es: "Camarones tempura, pescado fresco sellado, salsa acevichada artesanal de la casa, salsa tare y crujientes hilos de camote.",
+      en: "Crispy shrimp tempura, seared fresh fish, house artisanal acevichada sauce, sweet tare and crunchy sweet potato shoestrings."
+    },
+    prices: { takeout: 6500, service: 7150 },
+    image: "assets/real-acevichado-roll.jpg",
+    tags: { es: ["Nuevo", "Camarón Tempura", "Camote"], en: ["New", "Tempura Shrimp", "Sweet Potato"] }
+  },
+  {
+    id: "sake-volcano",
+    code: "ROL-02",
+    portions: "8 piezas",
+    category: ["uramaki", "flambe"],
+    name: { es: "Sake Volcano Roll", en: "Sake Volcano Roll" },
+    jp: "鮭火山巻",
+    description: {
+      es: "Relleno de atún fresco, kanikama, queso crema y aguacate. Cubierto de tartar de salmón spicy y salsa de anguila con cebollinos y ajonjolí.",
+      en: "Filled with fresh tuna, kanikama, cream cheese and avocado. Crowned with spicy salmon tartare, savory eel glaze, scallions and sesame."
+    },
+    prices: { takeout: 6800, service: 7480 },
+    image: "assets/real-sake-volcano.jpg",
+    tags: { es: ["Salmón Spicy", "Volcán", "Atún"], en: ["Spicy Salmon", "Volcano", "Ahi Tuna"] }
+  },
+  {
+    id: "godzilla-roll",
+    code: "ROL-03",
+    portions: "8 piezas",
+    category: ["uramaki"],
+    name: { es: "Godzilla Roll", en: "Godzilla Roll" },
+    jp: "ゴジラ巻",
+    description: {
+      es: "Relleno de kanikama, queso crema y aguacate suave. Cubierto de camarones tempura crujientes bañados en Spicy Mayo, Sweet Mayo y Tare.",
+      en: "Filled with kanikama, cream cheese and creamy avocado. Topped with crispy tempura shrimp drizzled in Spicy Mayo, Sweet Mayo and Tare."
+    },
+    prices: { takeout: 6900, service: 7590 },
+    image: "assets/real-godzilla-roll.jpg",
+    tags: { es: ["Camarones Tempura", "Spicy Mayo", "Crunchy"], en: ["Tempura Shrimp", "Spicy Mayo", "Crunchy"] }
+  },
+  {
+    id: "spicy-ika",
+    code: "ROL-04",
+    portions: "8 piezas",
+    category: ["uramaki", "flambe"],
+    name: { es: "Spicy Ika Roll", en: "Spicy Ika Roll" },
+    jp: "烏賊スパイシー",
+    description: {
+      es: "Aros de calamar tempura crujientes sobre roll de aguacate y queso crema, salseado con tare dulce, spicy mayo y cebollinos frescos.",
+      en: "Crunchy calamari tempura rings atop avocado and cream cheese roll, finished with sweet tare glaze, spicy mayo and green scallions."
+    },
+    prices: { takeout: 6200, service: 6820 },
+    image: "assets/real-spicy-ika.jpg",
+    tags: { es: ["Calamares Tempura", "Tare", "Spicy Mayo"], en: ["Tempura Calamari", "Tare", "Spicy Mayo"] }
+  },
+  {
+    id: "tartar-atun",
     code: "ESP-01",
-    portions: "Para compartir",
+    portions: "Plato de entrada / especialidad",
     category: ["specialties", "fresh"],
-    name: { es: "Torre Kingyo", en: "Kingyo Tower" },
-    jp: "金魚タワー",
+    name: { es: "Tartar de Atún", en: "Ahi Tuna Tartare" },
+    jp: "鮪タルタル",
     description: {
-      es: "Suculenta torre de arroz de sushi, ensalada de kanimi, atún fresco, salmón fresco y aguacate. Calamares tempura y camarones tempura. Cubierta con salsas de la casa.",
-      en: "Succulent sushi rice tower, kanimi salad, fresh tuna, fresh salmon and avocado. Tempura squid and tempura shrimp, draped with house sauces."
+      es: "Cama de aguacate cremoso con cebolla morada. Atún fresco levemente picante marinado con salsa de soya, aceite de ajonjolí y crujientes chips de camote.",
+      en: "Bed of fresh avocado with red onions. Mild spicy fresh ahi tuna seasoned with soy sauce, sesame oil and crisp sweet potato chips."
     },
     prices: { takeout: 6500, service: 7150 },
-    image: "assets/torre-kingyo-menu.jpg",
-    tags: { es: ["Plato Insignia", "Fusión"], en: ["Signature", "Fusion"] }
+    image: "assets/real-tartar-atun.jpg",
+    tags: { es: ["Atún Fresco", "Aguacate", "Chips de Camote"], en: ["Fresh Tuna", "Avocado", "Sweet Potato Chips"] }
   },
   {
-    id: "neptuno",
+    id: "lomo-atun",
     code: "ESP-02",
-    portions: "Plato individual / entrada",
+    portions: "Plato principal de autor",
     category: ["specialties", "fresh"],
-    name: { es: "Ensalada Neptuno", en: "Neptune Salad" },
-    jp: "海王サラダ",
+    name: { es: "Lomo de Atún Sellado", en: "Seared Ahi Tuna Loin" },
+    jp: "鮪たたき",
     description: {
-      es: "Delicioso mix de wakame y kanikama. Cubierto de trocitos de salmón, trocitos de atún y trocitos de aguacate. Cubierta de salsa de anguila.",
-      en: "Delightful blend of wakame and kanikama topped with diced salmon, tuna, avocado and finished with savory eel tare glaze."
+      es: "Lomo de atún sellado con costra de ajonjolí y mantequilla con finas hierbas. Acompañado de guacamole fresco, cebolla encurtida y salsa teriyaki de la casa.",
+      en: "Seared ahi tuna loin crusted with sesame seeds and herb butter. Served with house guacamole, pickled red onions and artisanal teriyaki glaze."
     },
-    prices: { takeout: 6500, service: 7150 },
-    image: "assets/ensalada-neptuno-menu.jpg",
-    tags: { es: ["Fresco", "Marino"], en: ["Fresh", "Ocean"] }
+    prices: { takeout: 7500, service: 8250 },
+    image: "assets/real-lomo-atun.jpg",
+    tags: { es: ["Atún Sellado", "Guacamole", "Costra Ajonjolí"], en: ["Seared Tuna", "Guacamole", "Sesame Crust"] }
   },
   {
-    id: "burger",
+    id: "kingyo-burger",
     code: "ESP-03",
     portions: "Individual",
     category: ["specialties"],
-    name: { es: "Sushi Burger", en: "Sushi Burger" },
+    name: { es: "Kingyo Burger de Kanikama", en: "Kingyo Kanikama Burger" },
     jp: "寿司バーガー",
     description: {
-      es: "Fusión asiática americana servida en forma de hamburguesa con arroz crocante. Disponible con pollo, camarón, atún y salmón.",
-      en: "Asian-American fusion burger with crispy sesame rice buns. Available with chicken, shrimp, fresh tuna or salmon."
+      es: "Fusión crujiente con medallón de arroz panko empanizado, ensalada de kanikama de la casa, aguacate cremoso y salsa tare con ajonjolí.",
+      en: "Crispy sushi fusion with panko-crusted rice bun, house kanikama crab salad, creamy avocado and savory tare drizzle."
     },
     prices: { takeout: 5000, service: 5500 },
-    image: "assets/sushi-burger-menu.jpg",
-    tags: { es: ["Fusión", "4 Proteínas"], en: ["Fusion", "4 Proteins"] }
+    image: "assets/real-kingyo-burger.png",
+    tags: { es: ["Arroz Crocante", "Kanikama", "Fusión"], en: ["Crispy Rice", "Kanikama", "Fusion"] }
   },
   {
-    id: "black-gold",
-    code: "U29",
-    portions: "8 piezas",
-    category: ["uramaki", "specialties"],
-    name: { es: "Uramaki Black Gold", en: "Black Gold Uramaki" },
-    jp: "黒金ロール",
-    description: {
-      es: "Arroz negro imperial, salmón fresco seleccionado, aguacate cremoso, huevas de ikura y destellos de oro comestible de 24k.",
-      en: "Imperial black forbidden rice, fresh salmon, ripe avocado, ikura caviar and real 24k edible gold flakes."
-    },
-    prices: { takeout: 7500, service: 8250 },
-    image: "assets/uramaki-black-gold.jpg",
-    tags: { es: ["Oro 24k", "Imperial"], en: ["24k Gold", "Imperial"] }
-  },
-  {
-    id: "dragon",
-    code: "U18",
-    portions: "8 piezas",
-    category: ["uramaki"],
-    name: { es: "Dragon Roll Imperial", en: "Imperial Dragon Roll" },
-    jp: "竜巻ロール",
-    description: {
-      es: "Anguila unagi glaseada al fuego, langostino en tempura crocante, láminas de aguacate maduro y reducción de tare dulce.",
-      en: "Torched caramelized unagi eel, crispy tempura prawns, avocado scales and rich sweet eel tare glaze."
-    },
-    prices: { takeout: 6900, service: 7590 },
-    image: "assets/dragon-roll-luxury.jpg",
-    tags: { es: ["Anguila Unagi", "Tempura"], en: ["Unagi Eel", "Tempura"] }
-  },
-  {
-    id: "ebi-flambe",
-    code: "U25",
-    portions: "8 piezas",
-    category: ["flambe", "uramaki"],
-    name: { es: "Uramaki Ebi Flambé", en: "Ebi Flambé Uramaki" },
-    jp: "炎海老ロール",
-    description: {
-      es: "Camarón tempura crocante, cubierto de salmón fresco sellado a la llama con soplete, mayonesa trufada flambeada y cebollino.",
-      en: "Crispy tiger prawn tempura, covered with flame-torched salmon, melted truffle aioli and fresh chives."
-    },
-    prices: { takeout: 6500, service: 7150 },
-    image: "assets/ebi-flambe-roll.jpg",
-    tags: { es: ["Sellado al Fuego", "Trufa"], en: ["Flame-Seared", "Truffle"] }
-  },
-  {
-    id: "spicy-tuna",
-    code: "U12",
-    portions: "8 piezas",
-    category: ["uramaki", "fresh"],
-    name: { es: "Spicy Tuna Tartare", en: "Spicy Tuna Tartare" },
-    jp: "辛口鮪",
-    description: {
-      es: "Atún rojo fresco en cubos marinado en shichimi togarashi, aceite de sésamo tostado, aguacate y micro-brotes frescos.",
-      en: "Fresh ahi tuna tartare marinated with Japanese togarashi, toasted sesame oil, avocado and garden micro-herbs."
-    },
-    prices: { takeout: 6200, service: 6820 },
-    image: "assets/kingyo-sushi-craft.png",
-    tags: { es: ["Atún Rojo", "Picante Suave"], en: ["Ahi Tuna", "Mild Spicy"] }
-  },
-  {
-    id: "barco-kingyo",
-    code: "BARCO",
-    portions: "Para 3 a 4 personas",
+    id: "pollo-teriyaki",
+    code: "ESP-04",
+    portions: "Plato fuerte individual",
     category: ["specialties"],
-    name: { es: "Barco Imperial Kingyo", en: "Imperial Kingyo Boat" },
-    jp: "金魚の大船",
+    name: { es: "Pollo Teriyaki Bowl", en: "Chicken Teriyaki Bowl" },
+    jp: "照り焼きチキン",
     description: {
-      es: "La experiencia insignia: espectacular navío de madera con surtido selecto de 32 piezas (nigiris de autor, sashimis frescos y uramakis premium).",
-      en: "The ultimate centerpiece: magnificent wooden boat laden with 32 chef-selected pieces of nigiri, fresh sashimi and signature rolls."
-    },
-    prices: { takeout: 22000, service: 24200 },
-    image: "assets/sushi-boat-luxury.jpg",
-    tags: { es: ["32 Piezas", "Celebración"], en: ["32 Pieces", "Celebration"] }
-  },
-  {
-    id: "bacon-roll",
-    code: "U24",
-    portions: "8 piezas",
-    category: ["flambe"],
-    name: { es: "Bacon Roll Flambé", en: "Bacon Flambé Roll" },
-    jp: "ベーコン巻",
-    description: {
-      es: "Salmón fresco, queso crema Philadelphia y aguacate, envuelto en panceta ahumada crujiente flameada y glaseada en teriyaki.",
-      en: "Fresh salmon, Philadelphia cream cheese and avocado wrapped in crisp flame-kissed smoky bacon with teriyaki."
-    },
-    prices: { takeout: 5800, service: 6380 },
-    image: "assets/kingyo-sushi-hero.png",
-    tags: { es: ["Panceta Flambé", "Teriyaki"], en: ["Bacon Flambé", "Teriyaki"] }
-  },
-  {
-    id: "ebi-tartufo",
-    code: "U26",
-    portions: "8 piezas",
-    category: ["flambe", "uramaki"],
-    name: { es: "Uramaki Ebi Tartufo", en: "Ebi Truffle Uramaki" },
-    jp: "トリュフ海老",
-    description: {
-      es: "Camarón frito tempura, tartar de atún flameado, emulsión artesanal de trufa negra de verano y crocante de puerro.",
-      en: "Crispy shrimp tempura, torched tuna tartare, summer black truffle sauce and leek crisps."
-    },
-    prices: { takeout: 6500, service: 7150 },
-    image: "assets/ebi-flambe-roll.jpg",
-    tags: { es: ["Trufa Negra", "Gourmet"], en: ["Black Truffle", "Gourmet"] }
-  },
-  {
-    id: "black-phila",
-    code: "U30",
-    portions: "8 piezas",
-    category: ["uramaki"],
-    name: { es: "Uramaki Black Phila", en: "Black Phila Uramaki" },
-    jp: "黒フィラ",
-    description: {
-      es: "Arroz negro, salmón fresco noruego, suave queso Philadelphia, aguacate y crocante de pistacho tostado.",
-      en: "Black forbidden rice, fresh Norwegian salmon, smooth Philadelphia cream cheese, avocado and crushed roasted pistachios."
-    },
-    prices: { takeout: 6200, service: 6820 },
-    image: "assets/uramaki-black-gold.jpg",
-    tags: { es: ["Pistacho", "Arroz Negro"], en: ["Pistachio", "Black Rice"] }
-  },
-  {
-    id: "vege-roll",
-    code: "U34",
-    portions: "8 piezas",
-    category: ["fresh"],
-    name: { es: "Uramaki Verde Zen", en: "Green Zen Uramaki" },
-    jp: "禅ベジロール",
-    description: {
-      es: "Fino manto de aguacate maduro, espárragos salteados, pepino japonés kyuri, zanahoria crocante y aderezo de sésamo.",
-      en: "Delicate fan of sliced avocado, tender asparagus, Japanese kyuri cucumber, sweet carrots and roasted sesame dressing."
+      es: "Jugosas tiras de pollo marinadas y glaseadas en salsa teriyaki tradicional con semillas de ajonjolí, servidas sobre arroz japonés al vapor.",
+      en: "Juicy tender chicken glazed in traditional sweet teriyaki sauce with toasted sesame seeds over steamed Japanese sushi rice."
     },
     prices: { takeout: 5200, service: 5720 },
-    image: "assets/kingyo-sushi-craft.png",
-    tags: { es: ["Vegetariano", "Zen"], en: ["Vegetarian", "Zen"] }
+    image: "assets/real-pollo-teriyaki.jpg",
+    tags: { es: ["Pollo Teriyaki", "Arroz al Vapor", "Sésamo"], en: ["Teriyaki Chicken", "Steamed Rice", "Sesame"] }
+  },
+  {
+    id: "tropical-roll",
+    code: "ROL-05",
+    portions: "8 piezas",
+    category: ["uramaki"],
+    name: { es: "Tropical Roll", en: "Tropical Fusion Roll" },
+    jp: "熱帯ロール",
+    description: {
+      es: "Roll fusión con frutas tropicales frescas, aguacate cremoso, queso crema y reducción de salsas dulces con ajonjolí tostado.",
+      en: "Tropical fusion roll featuring sweet fruits, creamy avocado, cream cheese and reduction of sweet sauces with toasted sesame."
+    },
+    prices: { takeout: 5800, service: 6380 },
+    image: "assets/real-tropical-roll.jpg",
+    tags: { es: ["Tropical", "Fresco", "Aguacate"], en: ["Tropical", "Fresh", "Avocado"] }
+  },
+  {
+    id: "volcano-aguacate",
+    code: "ROL-06",
+    portions: "8 piezas",
+    category: ["uramaki"],
+    name: { es: "Volcano de Kanikama", en: "Kanikama Volcano Roll" },
+    jp: "蟹火山巻",
+    description: {
+      es: "Roll envuelto en finas láminas de aguacate maduro, coronado con abundante volcán de kanikama aliñado, salsa tare y ajonjolí.",
+      en: "Roll draped in fresh ripe avocado slices, generously crowned with seasoned kanikama volcano topping, sweet tare and sesame."
+    },
+    prices: { takeout: 6200, service: 6820 },
+    image: "assets/real-volcano-aguacate.jpg",
+    tags: { es: ["Aguacate Manto", "Kanikama Volcano", "Tare"], en: ["Avocado Blanket", "Kanikama Volcano", "Tare"] }
+  },
+  {
+    id: "atun-aguacate",
+    code: "ROL-07",
+    portions: "8 piezas",
+    category: ["uramaki", "fresh"],
+    name: { es: "Maguro Avocado Roll", en: "Maguro Avocado Roll" },
+    jp: "鮪アボカド",
+    description: {
+      es: "Roll clásico japonés con atún fresco de primera calidad, aguacate cremoso, pepino kyuri y sésamo blanco sobre piedra pizarra.",
+      en: "Classic Japanese roll with premium fresh ahi tuna, creamy avocado, crisp kyuri cucumber and white sesame on slate stone."
+    },
+    prices: { takeout: 5900, service: 6490 },
+    image: "assets/real-atun-aguacate.jpg",
+    tags: { es: ["Atún Fresco", "Aguacate", "Clásico"], en: ["Fresh Tuna", "Avocado", "Classic"] }
+  },
+  {
+    id: "tempura-crunch",
+    code: "ROL-08",
+    portions: "8 piezas",
+    category: ["uramaki", "flambe"],
+    name: { es: "Tempura Crunch Roll con Tare", en: "Tempura Crunch Roll" },
+    jp: "天麩羅クランチ",
+    description: {
+      es: "Roll con relleno tempurizado crujiente, bañado al momento por el chef con reducción de tare artesanal y cebollinos frescos.",
+      en: "Crispy tempura-fried roll drizzled tableside by the chef with artisanal sweet tare reduction and fresh scallions."
+    },
+    prices: { takeout: 6000, service: 6600 },
+    image: "assets/real-chef-tare.jpg",
+    tags: { es: ["Crocante", "Salsa Tare", "Chef Special"], en: ["Crunchy", "Tare Sauce", "Chef Special"] }
+  },
+  {
+    id: "avocado-sangria",
+    code: "ROL-09",
+    portions: "8 piezas",
+    category: ["uramaki"],
+    name: { es: "Avocado Tempura Special", en: "Avocado Tempura Special" },
+    jp: "アボカド天巻",
+    description: {
+      es: "Roll tempurizado cubierto de aguacate fresco y lluvia de tempura crunch con salsa dulce, maridaje sugerido con sangría de la casa.",
+      en: "Tempura roll draped with fresh avocado slices and tempura crunch flakes with sweet glaze, pairs with house sangria."
+    },
+    prices: { takeout: 6300, service: 6930 },
+    image: "assets/real-roll-sangria.jpg",
+    tags: { es: ["Aguacate", "Tempura Flakes", "Maridaje"], en: ["Avocado", "Tempura Flakes", "Pairing"] }
+  },
+  {
+    id: "barco-familiar",
+    code: "COM-01",
+    portions: "Para 4 a 5 personas",
+    category: ["specialties"],
+    name: { es: "Barco Familiar Kingyo (40 Pzs)", en: "Family Kingyo Boat (40 Pcs)" },
+    jp: "金魚の大船",
+    description: {
+      es: "Gran navío tradicional de madera con 5 rolls seleccionados de la casa (40 piezas). El auténtico centro de mesa para compartir en familia en Pérez Zeledón y Bijagua.",
+      en: "Traditional wooden vessel laden with 5 house-selected specialty rolls (40 pieces). The centerpiece to share with family in Pérez Zeledón and Bijagua."
+    },
+    prices: { takeout: 24000, service: 26400 },
+    image: "assets/real-barco-sushi.jpg",
+    tags: { es: ["40 Piezas", "5 Rolls", "Para Compartir"], en: ["40 Pieces", "5 Rolls", "Family Share"] }
+  },
+  {
+    id: "combo-especial",
+    code: "COM-02",
+    portions: "Para 3 a 4 personas",
+    category: ["specialties"],
+    name: { es: "Combo Especial Kingyo (4 Rolls)", en: "Kingyo Special Combo (4 Rolls)" },
+    jp: "特選コンボ",
+    description: {
+      es: "Bandeja variada para compartir con 4 rolls completos de la casa: plátano maduro crocante, salmón fresco, atún y toques spicy.",
+      en: "Sharing platter featuring 4 complete rolls: sweet fried plantain crunch, fresh salmon, ahi tuna and spicy drops."
+    },
+    prices: { takeout: 19500, service: 21450 },
+    image: "assets/real-combo-especial.jpg",
+    tags: { es: ["4 Rolls", "Plátano Maduro", "Variedad"], en: ["4 Rolls", "Sweet Plantain", "Variety"] }
+  },
+  {
+    id: "espacio-proximo-1",
+    code: "PRÓXIMAMENTE",
+    portions: "Carta Kingyo",
+    category: ["specialties", "uramaki"],
+    name: { es: "Espacio para Próximo Platillo", en: "Reserved for New Dish" },
+    jp: "近日公開",
+    description: {
+      es: "Espacio reservado en carta para incorporar más fotografías reales de la cocina e información del menú de Kingyo Sushi.",
+      en: "Reserved spot to add more authentic Kingyo kitchen dish photos and menu information."
+    },
+    prices: { takeout: 0, service: 0 },
+    isPlaceholder: true,
+    tags: { es: ["Foto Real", "En Preparación"], en: ["Real Photo", "In Progress"] }
   }
 ];
 
@@ -221,8 +281,8 @@ const i18nDict = {
     pillar2Desc: "Recetas originales y salsas artesanales",
     pillar3Title: "2 Sedes en Costa Rica",
     pillar3Desc: "Pérez Zeledón & Bijagua",
-    chefSelection: "Selección del Chef",
-    showcaseShortDesc: "Arroz negro imperial, salmón, ikura y destellos de oro comestible",
+    chefSelection: "Nuevo en Kingyo",
+    showcaseShortDesc: "Camarones tempura, pescado sellado, salsa acevichada artesanal y crujientes hilos de camote",
     priceFrom: "Desde",
     addToCart: "+ Agregar a Selección",
     scrollCue: "Descubrir",
@@ -231,29 +291,29 @@ const i18nDict = {
     ribbon3: "FUSIÓN CONTEMPORÁNEA",
     ribbon4: "CALIDAD · SABOR · TRADICIÓN",
     menuSpecialtiesTitle: "ESPECIALIDADES",
-    menuSpecialtiesDesc: "Nuestras creaciones insignia extraídas directamente de la carta oficial de Kingyo.",
+    menuSpecialtiesDesc: "Nuestras creaciones insignia elaboradas en Kingyo con ingredientes reales y frescos.",
     modeTakeaway: "Para Llevar / Express",
     modeDineIn: "Consumo en Mesa (+10% servicio)",
-    cardBadgeSignature: "Plato Insignia",
-    cardBadgeFresh: "Frescura Marina",
-    cardBadgeFusion: "Fusión de Autor",
-    torreDesc: "Suculenta torre de arroz de sushi, ensalada de kanimi, atún fresco, salmón fresco y aguacate. Calamares tempura y camarones tempura. Cubierta con salsas de la casa.",
-    neptunoDesc: "Delicioso mix de wakame y kanikama. Cubierto de trocitos de salmón, trocitos de atún y trocitos de aguacate. Cubierta de salsa de anguila.",
-    burgerDesc: "Fusión asiática americana servida en forma de hamburguesa. Disponible con las siguientes proteínas: pollo, camarón, atún y salmón.",
+    cardBadgeSignature: "Frescura Insignia",
+    cardBadgeFresh: "Cocina de Autor",
+    cardBadgeFusion: "Fusión Crunchy",
+    tartarDesc: "Cama de aguacate con cebolla morada. Atún levemente picante con salsa de soya, aceite de ajonjolí y chips de camote.",
+    lomoAtunDesc: "Lomo de atún sellado con costra de ajonjolí y mantequilla con hierbas. Acompañado de guacamole fresco con cebolla encurtida y deliciosa salsa teriyaki.",
+    burgerDesc: "Fusión crujiente con medallón de arroz panko empanizado, ensalada de kanikama de la casa, aguacate cremoso y salsa tare con ajonjolí.",
     pillTakeout: "Para llevar",
     pillService: "Con 10% servicio",
     addToOrder: "+ Agregar al Pedido",
     kaizenTagline: "EXPERIENCIA OMAKASE & AUTOR",
     chooseRollTitle: "ELIGE TU ROLL",
     chooseRollSubtitle: "Cuatro estados de ánimo. Una elección perfecta.",
-    mood1: "OPULENCIA & MISTERIO",
-    roll1Ingredients: "Arroz negro prohibido, salmón fresco, ikura y oro comestible",
-    mood2: "INTENSIDAD & FUEGO",
-    roll2Ingredients: "Anguila unagi glaseada, langostino tempura, aguacate y salsa tare",
-    mood3: "AHUMADO & CREMOSO",
-    roll3Ingredients: "Camarón crocante, salmón sellado al soplete y mayonesa trufada",
-    mood4: "FRESCURA & PICANTE",
-    roll4Ingredients: "Atún rojo fresco en cubos, togarashi japonés, aguacate y cebollino",
+    mood1: "VOLCÁN & SALMÓN SPICY",
+    roll1Ingredients: "Relleno de atún, kanikama, queso crema y aguacate. Cubierto de tartar de salmón spicy y salsa de anguila",
+    mood2: "CRUNCH & CAMARÓN TEMPURA",
+    roll2Ingredients: "Kanikama, queso crema y aguacate. Cubierto de camarones tempura bañados en Spicy Mayo, Sweet Mayo y Tare",
+    mood3: "CALAMAR CROCANTE & TARE",
+    roll3Ingredients: "Aros de calamar tempura crujientes sobre base fresca, salsa tare artesanal, spicy mayo y cebollinos",
+    mood4: "CREMOSIDAD DE AGUACATE",
+    roll4Ingredients: "Roll envuelto en láminas de aguacate maduro, coronado con volcán de kanikama, salsa tare y sésamo tostado",
     craftPretitle: "EL RITUAL DEL SUSHI",
     craftTitle: "Tradición Japonesa, Alma de Pérez Zeledón.",
     craftText1: "En Kingyo no solo servimos sushi; honramos un arte que exige disciplina en cada corte de pescado, equilibrio en la acidez del arroz y respeto absoluto por los ingredientes más nobles.",
@@ -264,15 +324,15 @@ const i18nDict = {
     point2Desc: "Preparado diariamente con vinagre de arroz selecto a temperatura óptima.",
     point3Title: "Para Compartir en Familia",
     point3Desc: "Nuestros emblemáticos barcos de sushi son la cúspide de la celebración.",
-    boatDesc: "Selección magistral de nigiris, uramakis de autor y sashimis para compartir.",
-    addBoat: "Pedir Barco Imperial",
+    boatDesc: "Gran barco tradicional de madera servido con 5 rolls seleccionados de la casa (40 piezas) para compartir en familia.",
+    addBoat: "Pedir Barco Familiar",
     menuDigitalPre: "EXPLORACIÓN GASTRONÓMICA",
     menuDigitalTitle: "CARTA COMPLETA DIGITAL",
     menuDigitalIntro: "Buscá por ingrediente, roll favorito o categoría. Podés armar tu pedido y enviarlo directo por WhatsApp.",
     showingPricesFor: "Mostrando precios para:",
     takeaway: "Para Llevar",
     atTable: "En Mesa (+10%)",
-    searchPlaceholder: "Buscar por salmón, atún, trufa, tempura, etc…",
+    searchPlaceholder: "Buscar por salmón, atún, calamar, tempura, etc…",
     catAll: "Todos",
     catSpecialties: "Especialidades",
     catFlambe: "Rolls Flambé",
@@ -296,6 +356,25 @@ const i18nDict = {
     locBranchBijagua: "● Segunda Sede Oficial",
     bijaguaAddressText: "Ubicados en Bijagua. Consulta directamente por WhatsApp para horarios de hoy, disponibilidad y pedidos a domicilio.",
     consultBijagua: "Consultar por WhatsApp",
+    annSchedule: "Horario: Lun-Jue 11am–9pm | Vie-Dom 11am–10pm",
+    dishAcevichadoTitle: "Acevichado Roll 🔥",
+    dishTartarTitle: "Tartar de Atún",
+    dishLomoTitle: "Lomo de Atún Sellado",
+    dishBurgerTitle: "Kingyo Burger de Kanikama",
+    roll1Title: "Sake Volcano Roll",
+    roll2Title: "Godzilla Roll",
+    roll3Title: "Spicy Ika Roll",
+    roll4Title: "Volcano de Kanikama",
+    boatTitle: "Barco Familiar Kingyo",
+    branchPzTitle: "Sede Pérez Zeledón",
+    branchBijaguaTitle: "Sede Bijagua",
+    branchStatusOpen: "● Abierto Hoy",
+    branchStatusSecond: "● Segunda Sede",
+    serviceDineIn: "✓ Salón y Mesa",
+    serviceTakeout: "✓ Para Llevar",
+    serviceExpress: "✓ Servicio Express",
+    callRestaurant: "Llamar al restaurante:",
+    openMapsBijagua: "Abrir en Google Maps (Bijagua)",
     reserveTitle: "Reservación de Mesa VIP",
     reserveDesc: "Coordina tu experiencia gastronómica o celebración en Kingyo directamente con nuestro equipo.",
     formName: "Nombre Completo",
@@ -322,7 +401,24 @@ const i18nDict = {
     footerNavTitle: "Explorar",
     footerContactTitle: "Contacto & Sedes",
     footerConnectTitle: "Conectar",
-    backToTop: "Volver Arriba"
+    backToTop: "Volver Arriba",
+    slogan: "Calidad · Sabor · Tradición",
+    navRolls: "Rolls de Autor",
+    annSchedule: "Horario: Lun-Jue 11am–9pm | Vie-Dom 11am–10pm",
+    serviceDineIn: "✓ Salón y Mesa",
+    serviceTakeout: "✓ Para Llevar",
+    serviceExpress: "✓ Servicio Express",
+    callRestaurant: "Llamar al restaurante:",
+    branchStatusOpen: "● Abierto Hoy",
+    branchStatusSecond: "● Segunda Sede",
+    boatTitle: "Barco Familiar Kingyo",
+    dishTartarTitle: "Tartar de Atún",
+    dishLomoTitle: "Lomo de Atún Sellado",
+    dishBurgerTitle: "Kingyo Burger de Kanikama",
+    roll1Title: "Sake Volcano Roll",
+    roll2Title: "Godzilla Roll",
+    roll3Title: "Spicy Ika Roll",
+    roll4Title: "Volcano de Kanikama"
   },
   en: {
     skip: "Skip to content",
@@ -351,8 +447,8 @@ const i18nDict = {
     pillar2Desc: "Original recipes and artisanal tare sauces",
     pillar3Title: "2 Costa Rica Locations",
     pillar3Desc: "Pérez Zeledón & Bijagua",
-    chefSelection: "Chef's Choice",
-    showcaseShortDesc: "Imperial black rice, fresh salmon, ikura roe and 24k edible gold flakes",
+    chefSelection: "New at Kingyo",
+    showcaseShortDesc: "Tempura shrimp, seared fish, house acevichada sauce and crunchy sweet potato shoestrings",
     priceFrom: "From",
     addToCart: "+ Add to Selection",
     scrollCue: "Discover",
@@ -361,29 +457,29 @@ const i18nDict = {
     ribbon3: "CONTEMPORARY FUSION",
     ribbon4: "QUALITY · FLAVOR · TRADITION",
     menuSpecialtiesTitle: "SPECIALTIES",
-    menuSpecialtiesDesc: "Our signature creations taken directly from Kingyo's official menu.",
+    menuSpecialtiesDesc: "Our signature creations crafted at Kingyo with fresh and authentic ingredients.",
     modeTakeaway: "Takeaway / Express",
     modeDineIn: "Dine-in (+10% service)",
-    cardBadgeSignature: "Masterpiece",
-    cardBadgeFresh: "Ocean Fresh",
-    cardBadgeFusion: "Signature Fusion",
-    torreDesc: "Succulent sushi rice tower, kanimi salad, fresh tuna, fresh salmon and avocado. Tempura squid and tempura shrimp, draped with house sauces.",
-    neptunoDesc: "Delightful blend of wakame and kanikama topped with diced salmon, tuna, avocado and finished with savory eel tare glaze.",
-    burgerDesc: "Asian-American fusion burger with crispy sesame rice buns. Available with chicken, shrimp, fresh tuna or salmon.",
+    cardBadgeSignature: "Signature Catch",
+    cardBadgeFresh: "Chef's Craft",
+    cardBadgeFusion: "Crunchy Fusion",
+    tartarDesc: "Bed of fresh avocado with red onions. Mild spicy fresh ahi tuna seasoned with soy sauce, sesame oil and crisp sweet potato chips.",
+    lomoAtunDesc: "Seared ahi tuna loin crusted with sesame seeds and herb butter. Served with house guacamole, pickled red onions and teriyaki glaze.",
+    burgerDesc: "Crispy sushi fusion with panko-crusted rice bun, house kanikama crab salad, creamy avocado and savory tare drizzle.",
     pillTakeout: "Takeout",
     pillService: "Dine-in (+10%)",
     addToOrder: "+ Add to Order",
     kaizenTagline: "OMAKASE & SIGNATURE CRAFT",
     chooseRollTitle: "CHOOSE YOUR ROLL",
     chooseRollSubtitle: "Four different moods. One perfect choice.",
-    mood1: "OPULENCE & MYSTERY",
-    roll1Ingredients: "Imperial black rice, fresh salmon, ikura caviar and 24k gold",
-    mood2: "INTENSITY & FIRE",
-    roll2Ingredients: "Caramelized unagi eel, prawn tempura, avocado and tare glaze",
-    mood3: "SMOKY & CREAMY",
-    roll3Ingredients: "Crispy prawn, torch-seared salmon and melted truffle aioli",
-    mood4: "FRESH & SPICY",
-    roll4Ingredients: "Fresh ahi tuna cubes, Japanese togarashi, avocado and chives",
+    mood1: "VOLCANO & SPICY SALMON",
+    roll1Ingredients: "Filled with tuna, kanikama, cream cheese and avocado. Crowned with spicy salmon tartare and eel tare",
+    mood2: "CRUNCH & TEMPURA SHRIMP",
+    roll2Ingredients: "Kanikama, cream cheese and avocado. Topped with crispy tempura shrimp in Spicy Mayo, Sweet Mayo and Tare",
+    mood3: "CRISPY SQUID & TARE",
+    roll3Ingredients: "Crispy tempura calamari rings on a fresh roll, house tare glaze, spicy mayo and green scallions",
+    mood4: "CREAMY AVOCADO",
+    roll4Ingredients: "Roll draped in ripe avocado slices, crowned with seasoned kanikama volcano topping, tare and sesame",
     craftPretitle: "THE SUSHI RITUAL",
     craftTitle: "Japanese Tradition, Soul of Pérez Zeledón.",
     craftText1: "At Kingyo, we do not merely serve sushi; we honor a craft that demands precision in every fish cut, equilibrium in the sushi rice acidity and respect for nature's finest ingredients.",
@@ -394,15 +490,15 @@ const i18nDict = {
     point2Desc: "Prepared daily with select Japanese rice vinegar at optimal temperature.",
     point3Title: "To Share with Family",
     point3Desc: "Our iconic sushi boats are the pinnacle of celebration and joy.",
-    boatDesc: "Magnificent presentation of nigiris, signature uramakis and fresh sashimis to share.",
-    addBoat: "Order Imperial Boat",
+    boatDesc: "Traditional wooden sushi boat laden with 5 house-selected specialty rolls (40 pieces) to share with family.",
+    addBoat: "Order Family Boat",
     menuDigitalPre: "CULINARY EXPLORATION",
     menuDigitalTitle: "DIGITAL FULL MENU",
     menuDigitalIntro: "Search by ingredient, favorite roll or category. Build your selection and order straight to WhatsApp.",
     showingPricesFor: "Showing prices for:",
     takeaway: "Takeaway",
     atTable: "Dine-in (+10%)",
-    searchPlaceholder: "Search for salmon, tuna, truffle, tempura, etc…",
+    searchPlaceholder: "Search for salmon, tuna, calamari, tempura, etc…",
     catAll: "All",
     catSpecialties: "Specialties",
     catFlambe: "Flambé Rolls",
@@ -426,6 +522,25 @@ const i18nDict = {
     locBranchBijagua: "● Second Official Branch",
     bijaguaAddressText: "Located in Bijagua. Inquire directly on WhatsApp for today's hours, availability and home delivery.",
     consultBijagua: "Chat on WhatsApp",
+    annSchedule: "Hours: Mon-Thu 11am–9pm | Fri-Sun 11am–10pm",
+    dishAcevichadoTitle: "Acevichado Roll 🔥",
+    dishTartarTitle: "Ahi Tuna Tartar",
+    dishLomoTitle: "Seared Ahi Tuna Loin",
+    dishBurgerTitle: "Kingyo Kanikama Burger",
+    roll1Title: "Sake Volcano Roll",
+    roll2Title: "Godzilla Roll",
+    roll3Title: "Spicy Ika Roll",
+    roll4Title: "Kanikama Volcano Roll",
+    boatTitle: "Kingyo Family Sushi Boat",
+    branchPzTitle: "Pérez Zeledón Branch",
+    branchBijaguaTitle: "Bijagua Branch",
+    branchStatusOpen: "● Open Today",
+    branchStatusSecond: "● Second Branch",
+    serviceDineIn: "✓ Dine-in Seating",
+    serviceTakeout: "✓ Takeout Available",
+    serviceExpress: "✓ Express Delivery",
+    callRestaurant: "Call restaurant:",
+    openMapsBijagua: "Open in Google Maps (Bijagua)",
     reserveTitle: "VIP Table Reservation",
     reserveDesc: "Arrange your gastronomic experience or celebration at Kingyo directly with our hosting team.",
     formName: "Full Name",
@@ -452,7 +567,24 @@ const i18nDict = {
     footerNavTitle: "Explore",
     footerContactTitle: "Contact & Branches",
     footerConnectTitle: "Connect",
-    backToTop: "Back to Top"
+    backToTop: "Back to Top",
+    slogan: "Quality · Flavor · Tradition",
+    navRolls: "Signature Rolls",
+    annSchedule: "Hours: Mon-Thu 11am–9pm | Fri-Sun 11am–10pm",
+    serviceDineIn: "✓ Dine-in Table",
+    serviceTakeout: "✓ Takeaway",
+    serviceExpress: "✓ Express Delivery",
+    callRestaurant: "Call the restaurant:",
+    branchStatusOpen: "● Open Today",
+    branchStatusSecond: "● Second Location",
+    boatTitle: "Family Kingyo Boat",
+    dishTartarTitle: "Ahi Tuna Tartare",
+    dishLomoTitle: "Seared Ahi Tuna Loin",
+    dishBurgerTitle: "Kingyo Kanikama Burger",
+    roll1Title: "Sake Volcano Roll",
+    roll2Title: "Godzilla Roll",
+    roll3Title: "Spicy Ika Roll",
+    roll4Title: "Kanikama Volcano Roll"
   }
 };
 
@@ -465,7 +597,7 @@ let currentCategory = "all";
 let searchQuery = "";
 const cartMap = new Map(); // id -> quantity
 
-const formatColon = val => `₡${new Intl.NumberFormat("es-CR").format(Math.round(val))}`;
+const formatColon = () => "₡???";
 
 /* ==========================================================================
    4. RENDER COMPLETE DIGITAL MENU GRID
@@ -504,6 +636,28 @@ function renderDigitalMenu() {
   }
 
   grid.innerHTML = filtered.map(item => {
+    if (item.isPlaceholder) {
+      return `
+        <article class="dark-menu-card placeholder-card" data-tilt>
+          <div class="card-top-row">
+            <span class="card-num-badge placeholder-badge">${item.code}</span>
+            <span class="card-portions">${item.portions}</span>
+          </div>
+          <div class="card-thumb-reflective placeholder-thumb">
+            <div class="placeholder-thumb-inner">
+              <span class="placeholder-icon">📷</span>
+              <p class="placeholder-main-text">${currentLang === "es" ? "Próximamente fotografía de la casa" : "Real kitchen photo coming soon"}</p>
+              <span class="placeholder-sub-text">${currentLang === "es" ? "Espacio reservado para nuevo platillo" : "Reserved for upcoming menu item"}</span>
+            </div>
+          </div>
+          <h3 class="dark-card-title">${item.name[currentLang]}</h3>
+          <p class="dark-card-ingredients">${item.description[currentLang]}</p>
+          <div class="dark-card-footer placeholder-footer">
+            <span class="placeholder-footer-note">${currentLang === "es" ? "✦ Próxima actualización de carta" : "✦ Next menu update"}</span>
+          </div>
+        </article>
+      `;
+    }
     const price = item.prices[currentPriceMode];
     return `
       <article class="dark-menu-card" data-id="${item.id}" data-tilt>
@@ -576,6 +730,8 @@ function updatePagePrices() {
    5. INTERACTIVE CART & WHATSAPP CHECKOUT ENGINE
    ========================================================================== */
 function addToCart(itemId, qty = 1) {
+  const item = menuData.find(d => d.id === itemId);
+  if (!item || item.isPlaceholder) return;
   const currentQty = cartMap.get(itemId) || 0;
   cartMap.set(itemId, currentQty + qty);
   renderCartDrawer();
@@ -1011,16 +1167,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Scroll to Page Top (Lenis & Native support)
+  function scrollToPageTop() {
+    if (window.lenis) {
+      window.lenis.scrollTo(0, { immediate: false });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   // Back to Top Button
-  document.querySelector("#back-to-top")?.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  document.querySelector("#back-to-top")?.addEventListener("click", e => {
+    e.preventDefault();
+    scrollToPageTop();
   });
 
   // Brand Logo Click: Scroll to Hero / Top
-  document.querySelectorAll(".brand").forEach(brandEl => {
+  document.querySelectorAll(".brand, .mobile-brand, #brand-logo-link, a[href='#hero'], a[href='#top']").forEach(brandEl => {
     brandEl.addEventListener("click", e => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const href = brandEl.getAttribute("href");
+      if (href === "#hero" || href === "#top" || brandEl.classList.contains("brand") || brandEl.id === "brand-logo-link") {
+        e.preventDefault();
+        scrollToPageTop();
+        // If mobile drawer is open, close it
+        const drawer = document.querySelector("#mobile-drawer");
+        if (drawer?.classList.contains("open")) {
+          drawer.classList.remove("open");
+          document.querySelector("#mobile-nav-toggle")?.classList.remove("active");
+        }
+      }
     });
   });
 
@@ -1174,6 +1349,7 @@ document.addEventListener("DOMContentLoaded", () => {
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true
     });
+    window.lenis = lenis;
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);

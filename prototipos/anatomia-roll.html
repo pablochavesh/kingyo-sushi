@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anatomía del Roll · Prototipo Kingyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet" />
+  <style>
+    /* Tokens copiados de styles.css del sitio (prototipo aislado, no modifica el sitio) */
+    :root {
+      --bg-obsidian: #080706;
+      --bg-card: rgba(22, 20, 17, 0.78);
+      --gold-primary: #d6ad58;
+      --gold-light: #f5dc9a;
+      --gold-line: rgba(214, 173, 88, 0.24);
+      --vermilion: #ef4b38;
+      --text-ivory: #f7f1e4;
+      --text-muted: #b8ac96;
+      --text-faint: #787060;
+      --font-display: "Cinzel Decorative", "Cormorant Garamond", Georgia, serif;
+      --font-serif: "Cormorant Garamond", Georgia, serif;
+      --font-sans: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-jp: "Noto Serif JP", serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: var(--bg-obsidian); color: var(--text-ivory); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body { background: radial-gradient(ellipse at 50% 0%, #1b1712 0%, var(--bg-obsidian) 70%) fixed; }
+
+    #dust { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+
+    .proto-bar {
+      position: fixed; top: 0; inset-inline: 0; z-index: 20;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 24px; font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--text-muted); background: rgba(8, 7, 6, .82); border-bottom: 1px solid var(--gold-line);
+      backdrop-filter: blur(8px);
+    }
+    .proto-bar b { color: var(--gold-primary); font-weight: 600; }
+
+    .spacer { position: relative; z-index: 1; min-height: 90vh; display: grid; place-content: center; text-align: center; padding: 96px 16px; }
+    .spacer .eyebrow { margin-bottom: 18px; }
+    .spacer h1 { font-family: var(--font-serif); font-weight: 600; font-size: clamp(40px, 6vw, 84px); line-height: 1; }
+    .spacer h1 em { color: var(--gold-light); font-style: italic; }
+    .spacer p { margin-top: 18px; color: var(--text-muted); font-family: var(--font-serif); font-style: italic; font-size: 20px; }
+    .scroll-cue { margin-top: 40px; font-size: 11px; letter-spacing: .3em; color: var(--text-faint); }
+    .scroll-cue::after { content: ""; display: block; width: 1px; height: 46px; margin: 12px auto 0; background: linear-gradient(var(--gold-primary), transparent); }
+
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--vermilion); }
+    .eyebrow .jp { font-family: var(--font-jp); letter-spacing: .1em; margin-right: 8px; }
+
+    /* ---------- Sección Anatomía ---------- */
+    .anatomy { position: relative; z-index: 1; }
+    .anatomy__pin {
+      position: relative; height: 100vh; height: 100svh; width: 100%;
+      display: grid; grid-template-columns: minmax(300px, .8fr) 1.25fr; align-items: center;
+      gap: 56px; max-width: 1320px; margin: 0 auto; padding: 72px 48px 40px;
+    }
+    .anatomy__copy { position: relative; }
+    .anatomy__title { font-family: var(--font-serif); font-weight: 600; font-size: clamp(34px, 3.6vw, 56px); line-height: 1.02; margin: 14px 0 28px; }
+    .anatomy__title em { color: var(--gold-light); font-style: italic; }
+
+    .steps { list-style: none; display: grid; gap: 2px; position: relative; }
+    .steps li {
+      display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start;
+      padding: 11px 16px; border-left: 1px solid var(--gold-line);
+      opacity: .32; transition: opacity .45s, border-color .45s, background .45s;
+    }
+    .steps li .kanji {
+      width: 36px; height: 36px; display: grid; place-items: center;
+      font-family: var(--font-jp); font-size: 18px; color: var(--vermilion);
+      background: rgba(239, 75, 56, .1); border: 1px solid rgba(239, 75, 56, .3); border-radius: 4px;
+    }
+    .steps li .num { font-family: var(--font-display); font-size: 12px; color: var(--gold-primary); margin-right: 8px; }
+    .steps li strong { font-family: var(--font-serif); font-size: 23px; font-weight: 600; display: block; line-height: 1.1; }
+    .steps li small { display: block; margin-top: 3px; font-size: 14px; line-height: 1.45; color: var(--text-muted); }
+    .steps li.is-active { opacity: 1; border-color: var(--gold-primary); background: linear-gradient(90deg, rgba(214, 173, 88, .09), transparent); }
+
+    .final {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 24px; border: 1px solid var(--gold-line); border-radius: 14px; background: var(--bg-card);
+      opacity: 0; transform: translateY(24px); pointer-events: none;
+    }
+    .final h3 { font-family: var(--font-serif); font-size: 32px; font-weight: 600; margin-top: 6px; }
+    .final p { margin-top: 6px; font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+    .final__row { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+    .btn {
+      font: 600 12px var(--font-sans); letter-spacing: .14em; text-transform: uppercase; cursor: pointer;
+      padding: 14px 20px; border-radius: 4px; transition: background .25s, color .25s, box-shadow .25s;
+    }
+    .btn-solid { color: var(--bg-obsidian); background: linear-gradient(120deg, #fff6d8, var(--gold-light) 40%, var(--gold-primary)); border: 0; box-shadow: 0 0 28px rgba(214,173,88,.25); }
+    .btn-ghost { color: var(--gold-light); background: rgba(214, 173, 88, .06); border: 1px solid var(--gold-primary); }
+    .btn-ghost:hover { background: var(--gold-primary); color: var(--bg-obsidian); }
+
+    /* Escenario fotográfico */
+    .stage {
+      position: relative; width: 100%; max-width: min(100%, 78vh); aspect-ratio: 1 / 1; justify-self: center;
+      border-radius: 18px; overflow: hidden; isolation: isolate;
+      border: 1px solid var(--gold-line);
+      box-shadow: 0 40px 120px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(0,0,0,.6) inset;
+    }
+    .stage__img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      will-change: transform; transform-origin: 0 0;
+      filter: saturate(1.08) contrast(1.06);
+    }
+    /* viñeta que se cierra sobre el punto de foco */
+    .stage__spot {
+      position: absolute; inset: 0; pointer-events: none; z-index: 2;
+      --x: 50%; --y: 50%; --r: 120%; --a: .0;
+      background: radial-gradient(circle at var(--x) var(--y), transparent 0, transparent calc(var(--r) * .45), rgba(8,7,6,var(--a)) var(--r));
+    }
+    .stage__tone { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(180deg, rgba(8,7,6,.35), transparent 30%, transparent 70%, rgba(8,7,6,.55)); }
+    .stage__grain { position: absolute; inset: -50%; z-index: 3; pointer-events: none; opacity: .09; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      animation: grain 1s steps(4) infinite; }
+    @keyframes grain { 0%{transform:translate(0,0)} 25%{transform:translate(-3%,2%)} 50%{transform:translate(2%,-3%)} 75%{transform:translate(-2%,-1%)} 100%{transform:translate(0,0)} }
+    .stage__sheen { position: absolute; inset: 0; z-index: 2; pointer-events: none; mix-blend-mode: soft-light;
+      background: linear-gradient(105deg, transparent 35%, rgba(255,236,190,.55) 50%, transparent 65%); transform: translateX(-120%); }
+
+    /* marcador de foco + etiqueta */
+    .focus { position: absolute; z-index: 4; left: 50%; top: 50%; width: 0; height: 0; opacity: 0; }
+    .focus__ring {
+      position: absolute; left: -46px; top: -46px; width: 92px; height: 92px; border-radius: 50%;
+      border: 1.5px solid var(--gold-light); box-shadow: 0 0 0 6px rgba(214,173,88,.12), 0 0 30px rgba(245,220,154,.35);
+    }
+    .focus__ring::after { content: ""; position: absolute; inset: -14px; border-radius: 50%; border: 1px solid rgba(245,220,154,.45); animation: pulse 2.2s ease-out infinite; }
+    @keyframes pulse { from { transform: scale(.75); opacity: 1; } to { transform: scale(1.35); opacity: 0; } }
+    .focus__dot { position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-light); }
+    .focus__tag {
+      position: absolute; top: -18px; white-space: nowrap; padding: 10px 14px;
+      background: rgba(8,7,6,.78); border: 1px solid var(--gold-line); border-radius: 6px; backdrop-filter: blur(6px);
+    }
+    .focus__tag::before { content: ""; position: absolute; top: 18px; width: 22px; height: 1px; background: var(--gold-primary); }
+    .focus.is-right .focus__tag { left: 70px; }
+    .focus.is-right .focus__tag::before { right: 100%; }
+    .focus.is-left .focus__tag { right: 70px; text-align: right; }
+    .focus.is-left .focus__tag::before { left: 100%; }
+    .focus__tag .jp { font-family: var(--font-jp); font-size: 12px; color: var(--vermilion); letter-spacing: .1em; }
+    .focus__tag b { display: block; font-family: var(--font-serif); font-size: 22px; font-weight: 600; line-height: 1.1; }
+
+    .stage__count { position: absolute; z-index: 4; right: 16px; bottom: 14px; font-family: var(--font-display); font-size: 12px; color: var(--gold-light); letter-spacing: .1em; }
+
+    .progress { position: absolute; left: 48px; right: 48px; bottom: 22px; height: 1px; background: var(--gold-line); }
+    .progress span { display: block; height: 100%; width: 100%; transform-origin: left; transform: scaleX(0); background: linear-gradient(90deg, var(--vermilion), var(--gold-light)); }
+
+    @media (max-width: 860px) {
+      .anatomy__pin { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-content: start; padding: 60px 16px 28px; gap: 18px; }
+      .stage { order: -1; max-width: min(100%, 52vh); }
+      .anatomy__title { display: none; }
+      .steps li { display: none; }
+      .steps li.is-active { display: grid; }
+      .anatomy__copy { min-height: 200px; }
+      .anatomy__copy .eyebrow { margin-bottom: 8px; }
+      .focus__tag { display: none; }
+      .progress { left: 16px; right: 16px; bottom: 14px; }
+      .final { padding: 18px; }
+      .final h3 { font-size: 26px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .stage__grain, .focus__ring::after { animation: none; }
+      .steps li { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="dust" aria-hidden="true"></canvas>
+
+  <div class="proto-bar"><span><b>Prototipo</b> · Animación scroll — Anatomía del roll</span><span>No integrado al sitio</span></div>
+
+  <section class="spacer">
+    <p class="eyebrow"><span class="jp">金魚</span>Kingyo Sushi &amp; Fusión</p>
+    <h1>Lo que hay <em>dentro</em><br />de cada pieza.</h1>
+    <p>Desliza y recorre un Acevichado Roll, capa por capa.</p>
+    <div class="scroll-cue">DESLIZAR</div>
+  </section>
+
+  <section class="anatomy" id="anatomia" aria-labelledby="anatomy-title">
+    <div class="anatomy__pin">
+      <div class="anatomy__copy">
+        <p class="eyebrow"><span class="jp">解剖</span>Anatomía de un roll</p>
+        <h2 class="anatomy__title" id="anatomy-title">Cada capa,<br /><em>una decisión.</em></h2>
+        <ol class="steps">
+          <li><span class="kanji">冠</span><div><strong><span class="num">01</span>Corona crocante</strong><small>Hilos dorados fritos al momento y cebollino fresco.</small></div></li>
+          <li><span class="kanji">醤</span><div><strong><span class="num">02</span>Salsas de la casa</strong><small>Mayonesa acevichada y reducción de anguila.</small></div></li>
+          <li><span class="kanji">炎</span><div><strong><span class="num">03</span>Pescado sellado</strong><small>Láminas de pescado fresco selladas al soplete.</small></div></li>
+          <li><span class="kanji">米</span><div><strong><span class="num">04</span>Shari &amp; nori</strong><small>Arroz sazonado con el vinagre de la casa, envuelto en alga tostada.</small></div></li>
+          <li><span class="kanji">心</span><div><strong><span class="num">05</span>Corazón</strong><small>Camarón en tempura crocante y aguacate.</small></div></li>
+        </ol>
+        <div class="final">
+          <p class="eyebrow">El nuevo integrante de la familia</p>
+          <h3>Acevichado Roll</h3>
+          <p>Todo lo que viste, en una sola pieza.</p>
+          <div class="final__row">
+            <button class="btn btn-solid" type="button">+ Agregar a mi pedido</button>
+            <button class="btn btn-ghost" type="button">Ver menú</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage" aria-label="Fotografía del Acevichado Roll de Kingyo, recorrida con zoom capa por capa">
+        <img class="stage__img" src="../assets/real-acevichado-roll.jpg" alt="Acevichado Roll: corte lateral con pescado sellado, arroz, nori, camarón tempura y aguacate, cubierto de salsas e hilos crocantes" />
+        <div class="stage__tone"></div>
+        <div class="stage__sheen"></div>
+        <div class="stage__spot"></div>
+        <div class="stage__grain"></div>
+        <div class="focus is-right" aria-hidden="true">
+          <div class="focus__ring"></div>
+          <div class="focus__dot"></div>
+          <div class="focus__tag"><span class="jp"></span><b></b></div>
+        </div>
+        <div class="stage__count" aria-hidden="true"></div>
+      </div>
+
+      <div class="progress" aria-hidden="true"><span></span></div>
+    </div>
+  </section>
+
+  <section class="spacer">
+    <p class="eyebrow">Fin del prototipo</p>
+    <h1>Aquí <em>continuaría</em><br />Especialidades.</h1>
+    <p>Pensado para ir entre el Hero y “Elige tu roll”.</p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+  (() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---- Polvo dorado de fondo ---- */
+    const cv = document.getElementById('dust'), cx = cv.getContext('2d');
+    const motes = Array.from({ length: 70 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.6 + .4, v: Math.random() * .00025 + .00008, p: Math.random() * 6.28 }));
+    const sizeDust = () => { cv.width = innerWidth * devicePixelRatio; cv.height = innerHeight * devicePixelRatio; };
+    sizeDust(); addEventListener('resize', sizeDust);
+    const drawDust = (t) => {
+      cx.clearRect(0, 0, cv.width, cv.height);
+      for (const m of motes) {
+        if (!reduce) { m.y -= m.v; if (m.y < -.02) m.y = 1.02; }
+        cx.globalAlpha = .25 + .35 * Math.sin(t / 900 + m.p) ** 2;
+        cx.fillStyle = '#d6ad58';
+        cx.beginPath(); cx.arc(m.x * cv.width, m.y * cv.height, m.r * devicePixelRatio, 0, 6.283); cx.fill();
+      }
+      if (!reduce) requestAnimationFrame(drawDust);
+    };
+    requestAnimationFrame(drawDust);
+
+    /* ---- Puntos de foco sobre la foto (coordenadas normalizadas 0–1) ---- */
+    const SHOTS = [
+      { fx: .5,  fy: .5,  s: 1,    jp: '',       name: '' },                 // vista general
+      { fx: .62, fy: .31, s: 1.7,  jp: '冠 · 01', name: 'Corona crocante' },
+      { fx: .46, fy: .74, s: 1.7,  jp: '醤 · 02', name: 'Salsas de la casa' },
+      { fx: .92, fy: .54, s: 1.8,  jp: '炎 · 03', name: 'Pescado sellado' },
+      { fx: .70, fy: .50, s: 1.8,  jp: '米 · 04', name: 'Shari & nori' },
+      { fx: .74, fy: .71, s: 1.9,  jp: '心 · 05', name: 'Corazón' },
+      { fx: .5,  fy: .5,  s: 1.04, jp: '',       name: '' }                  // cierre
+    ];
+    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+    // Centra el foco en el escenario sin dejar bordes vacíos; devuelve dónde queda el foco en pantalla
+    const frame = ({ fx, fy, s }) => {
+      const xp = clamp((.5 - fx * s) * 100, (1 - s) * 100, 0);
+      const yp = clamp((.5 - fy * s) * 100, (1 - s) * 100, 0);
+      return { xPercent: xp, yPercent: yp, scale: s, sx: xp / 100 + fx * s, sy: yp / 100 + fy * s };
+    };
+
+    const img = document.querySelector('.stage__img');
+    const spot = document.querySelector('.stage__spot');
+    const focus = document.querySelector('.focus');
+    const tagJp = focus.querySelector('.jp'), tagName = focus.querySelector('b');
+    const count = document.querySelector('.stage__count');
+    const steps = [...document.querySelectorAll('.steps li')];
+    const stepsBox = document.querySelector('.steps');
+    const finalCard = document.querySelector('.final');
+    const bar = document.querySelector('.progress span');
+    const sheen = document.querySelector('.stage__sheen');
+
+    if (reduce) {
+      steps.forEach((li) => li.classList.add('is-active'));
+      return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+    const lenis = new Lenis({ lerp: 0.1 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((t) => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+
+    const f0 = frame(SHOTS[0]);
+    gsap.set(img, { xPercent: f0.xPercent, yPercent: f0.yPercent, scale: 1.12 });
+
+    const spotState = { x: 50, y: 50, r: 120, a: 0 };
+    const paintSpot = () => {
+      spot.style.setProperty('--x', spotState.x + '%');
+      spot.style.setProperty('--y', spotState.y + '%');
+      spot.style.setProperty('--r', spotState.r + '%');
+      spot.style.setProperty('--a', spotState.a);
+    };
+
+    const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } });
+    tl.to(img, { scale: 1, duration: 1 }, 0)
+      .to(sheen, { xPercent: 240, duration: 1.2, ease: 'power2.inOut' }, .2);
+
+    // Cada paso: viaje de cámara (1.4) + pausa de lectura (0.9)
+    const T = [];
+    let t = 1.4;
+    SHOTS.slice(1, -1).forEach((shot, i) => {
+      const f = frame(shot);
+      T.push(t);
+      tl.to(img, { xPercent: f.xPercent, yPercent: f.yPercent, scale: f.scale, duration: 1.4 }, t)
+        .to(spotState, { x: f.sx * 100, y: f.sy * 100, r: 55, a: .72, duration: 1.4, onUpdate: paintSpot }, t)
+        .to(focus, { left: f.sx * 100 + '%', top: f.sy * 100 + '%', duration: 1.4 }, t)
+        .to(focus, { opacity: 0, duration: .25, ease: 'none' }, t)
+        .call(() => {
+          focus.classList.toggle('is-left', f.sx > .55);
+          focus.classList.toggle('is-right', f.sx <= .55);
+          tagJp.textContent = shot.jp; tagName.textContent = shot.name;
+          count.textContent = `0${i + 1} / 05`;
+        }, null, t + .7)
+        .to(focus, { opacity: 1, duration: .35, ease: 'none' }, t + 1.1);
+      t += 2.3;
+    });
+
+    // Cierre: la cámara se aleja y aparece la tarjeta
+    const fEnd = frame(SHOTS[SHOTS.length - 1]);
+    const tEnd = t;
+    tl.to(focus, { opacity: 0, duration: .3, ease: 'none' }, tEnd)
+      .to(img, { xPercent: fEnd.xPercent, yPercent: fEnd.yPercent, scale: fEnd.scale, duration: 1.6 }, tEnd)
+      .to(spotState, { x: 50, y: 50, r: 120, a: 0, duration: 1.6, onUpdate: paintSpot }, tEnd)
+      .to(sheen, { xPercent: 480, duration: 1.4, ease: 'power2.inOut' }, tEnd + .4)
+      .to(stepsBox, { opacity: 0, duration: .5, ease: 'none' }, tEnd + .6)
+      .to(count, { opacity: 0, duration: .3, ease: 'none' }, tEnd)
+      .to(finalCard, { opacity: 1, y: 0, pointerEvents: 'auto', duration: .8, ease: 'power2.out' }, tEnd + 1)
+      .to({}, { duration: .8 }, tEnd + 1.8);
+
+    const stepAt = (time) => {
+      if (time >= tEnd + .6) return -1;
+      let s = -1;
+      T.forEach((start, i) => { if (time >= start + .5) s = i; });
+      return s;
+    };
+    let current = -2;
+
+    ScrollTrigger.create({
+      trigger: '.anatomy',
+      start: 'top top',
+      end: '+=480%',
+      pin: '.anatomy__pin',
+      scrub: 1,
+      animation: tl,
+      onUpdate: (self) => { bar.style.transform = `scaleX(${self.progress})`; }
+    });
+    // el paso activo sale de la timeline (que sigue animando por el scrub), no del scroll
+    tl.eventCallback('onUpdate', () => {
+      const s = stepAt(tl.time());
+      if (s !== current) {
+        current = s;
+        steps.forEach((li, i) => li.classList.toggle('is-active', i === s));
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
