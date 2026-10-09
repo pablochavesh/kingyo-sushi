@@ -846,9 +846,12 @@ function setupAmbientGoldCanvas() {
   let width = (canvas.width = window.innerWidth);
   let height = (canvas.height = window.innerHeight);
 
+  let lastW = window.innerWidth;
   window.addEventListener("resize", () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+    if (Math.abs(window.innerWidth - lastW) > 30) {
+      lastW = width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
   });
 
   const count = Math.min(36, Math.floor(width / 38));
@@ -1013,6 +1016,14 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  // Brand Logo Click: Scroll to Hero / Top
+  document.querySelectorAll(".brand").forEach(brandEl => {
+    brandEl.addEventListener("click", e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+
   // Language Switch Toggle
   document.querySelector("#language-toggle")?.addEventListener("click", () => {
     setLanguage(currentLang === "es" ? "en" : "es");
@@ -1156,8 +1167,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // WhatsApp Checkout Trigger
   document.querySelector("#send-whatsapp-order-btn")?.addEventListener("click", sendWhatsAppOrder);
 
-  // Initialize Lenis Smooth Scroll if available
-  if (typeof Lenis !== "undefined") {
+  // Initialize Lenis Smooth Scroll only on desktop devices (preserves native pinch-to-zoom on mobile)
+  if (typeof Lenis !== "undefined" && window.matchMedia("(pointer: fine)").matches) {
     const lenis = new Lenis({
       duration: 1.2,
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

@@ -57,12 +57,15 @@ html {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   background-color: var(--bg-obsidian);
   color: var(--text-ivory);
   overflow-x: hidden;
+  max-width: 100%;
   position: relative;
   min-height: 100vh;
 }
@@ -158,11 +161,14 @@ button {
 /* ==========================================================================
    TOP ANNOUNCEMENT BAR (Clean, Elegant, Luxury)
    ========================================================================== */
+/* ==========================================================================
+   TOP ANNOUNCEMENT BAR (Clean, Elegant, Responsive)
+   ========================================================================== */
 .announcement-bar {
   background: #0f0d0b;
   border-bottom: 1px solid rgba(214, 173, 88, 0.16);
   font-size: 0.74rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--text-paper);
   padding: 8px 16px;
   position: relative;
@@ -175,6 +181,11 @@ button {
   gap: 12px;
   flex-wrap: wrap;
 }
+.announcement-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
 .live-dot {
   width: 7px;
   height: 7px;
@@ -182,6 +193,7 @@ button {
   border-radius: 50%;
   box-shadow: 0 0 8px #38ef7d;
   display: inline-block;
+  flex-shrink: 0;
   animation: pulse-dot 2s infinite;
 }
 @keyframes pulse-dot {
@@ -190,6 +202,20 @@ button {
 }
 .announcement-text {
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ann-cities {
+  font-weight: 600;
+  color: var(--text-ivory);
+}
+.ann-sep-inline {
+  color: var(--gold-primary);
+  font-size: 0.7rem;
+}
+.ann-schedule {
+  color: var(--text-paper);
 }
 .announcement-sep {
   color: var(--gold-primary);
@@ -210,6 +236,44 @@ button {
   width: 14px;
   height: 14px;
   fill: #25d366;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .announcement-bar {
+    padding: 6px 12px;
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+  .announcement-inner {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+  .announcement-left {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .announcement-text {
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+  .ann-sep-inline {
+    display: none;
+  }
+  .announcement-sep {
+    display: none;
+  }
+  .ann-schedule {
+    font-size: 0.67rem;
+    color: var(--text-muted);
+  }
+  .announcement-wa-link {
+    font-size: 0.68rem;
+    margin-top: 1px;
+  }
 }
 
 /* ==========================================================================
@@ -946,12 +1010,27 @@ button {
   }
   .hero-content {
     margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-badge {
+    margin-inline: auto;
+  }
+  .hero-logo-lockup {
+    justify-content: center;
+    width: 100%;
+    margin-inline: auto;
+  }
+  .hero-fish-logo {
+    margin-inline: auto;
   }
   .hero-actions {
     justify-content: center;
   }
   .hero-pillars {
     text-align: left;
+    width: 100%;
   }
   .hero-showcase {
     max-width: 440px;
