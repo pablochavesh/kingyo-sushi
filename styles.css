@@ -1162,30 +1162,70 @@ button {
   justify-content: center;
   gap: 18px;
   margin-bottom: 16px;
+  max-width: 100%;
+  padding-inline: 12px;
 }
 .gold-line {
   height: 1.5px;
-  width: clamp(40px, 10vw, 120px);
+  width: clamp(24px, 8vw, 120px);
   background: linear-gradient(90deg, transparent, var(--gold-primary));
+  flex-shrink: 1;
 }
 .gold-line.right {
   background: linear-gradient(90deg, var(--gold-primary), transparent);
 }
 .gold-flourish-star {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--gold-primary);
+  flex-shrink: 0;
 }
 
 .gold-embossed-title {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-size: clamp(1.4rem, 5.2vw, 4.2rem);
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: clamp(0.01em, 0.4vw, 0.08em);
   background: linear-gradient(180deg, #fff2cf 0%, #dfb55d 40%, #a27a2c 70%, #5e4313 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 20px rgba(214, 173, 88, 0.2);
-  line-height: 1;
+  line-height: 1.15;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .gold-title-wrap {
+    gap: 8px;
+    padding-inline: 8px;
+  }
+  .gold-line {
+    width: clamp(12px, 4vw, 32px);
+  }
+  .gold-flourish-star {
+    font-size: 0.85rem;
+  }
+  .gold-embossed-title {
+    font-size: clamp(1.3rem, 6.2vw, 2.2rem);
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-title-wrap {
+    gap: 6px;
+    padding-inline: 4px;
+  }
+  .gold-line {
+    display: none;
+  }
+  .gold-flourish-star {
+    font-size: 0.75rem;
+  }
+  .gold-embossed-title {
+    font-size: clamp(1.15rem, 5.8vw, 1.65rem);
+    letter-spacing: 0.01em;
+  }
 }
 
 .specialties-subtitle {
@@ -2594,6 +2634,49 @@ button {
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--gold-light);
+}
+
+@media (max-width: 768px) {
+  .floating-cart-anchor {
+    bottom: 18px;
+    right: 18px;
+  }
+  .cart-floating-btn {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    gap: 0;
+    border-radius: 50%;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85), 0 0 18px rgba(214, 173, 88, 0.35);
+  }
+  .cart-floating-btn:hover {
+    transform: scale(1.05);
+  }
+  .cart-btn-text {
+    display: none !important;
+  }
+  .cart-btn-icon-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-svg-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .cart-badge-count {
+    position: absolute;
+    top: -7px;
+    right: -9px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    border: 2px solid #110f0d;
+    box-shadow: 0 2px 8px rgba(239, 75, 56, 0.6);
+  }
 }
 
 .cart-overlay {
