@@ -1305,14 +1305,15 @@ button {
 
 .card-media-wrap {
   position: relative;
-  aspect-ratio: 1.15;
+  aspect-ratio: 1.25;
   overflow: hidden;
-  background: #000;
+  background: #0d0c0a;
 }
 .card-dish-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform var(--transition-cinematic);
 }
 .specialty-card:hover .card-dish-img {
@@ -1526,14 +1527,15 @@ button {
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  aspect-ratio: 1;
-  background: #000;
+  aspect-ratio: 1.18;
+  background: #0d0c0a;
   margin-bottom: 18px;
 }
 .pedestal-stone img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform var(--transition-smooth);
 }
 .pedestal-card:hover .pedestal-stone img {
