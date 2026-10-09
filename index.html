@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080706" />
+    <meta name="description" content="Kingyo Sushi & Fusión — Calidad, Sabor y Tradición. Restaurante japonés y sushi bar premium en Pérez Zeledón y Bijagua, Costa Rica." />
+    <link rel="icon" type="image/jpeg" href="logo%20circular%20Kingyo.jpg" />
+    
+    <!-- Preconnect & Luxury Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <title>Kingyo Sushi & Fusión | Experiencia Gastronómica Japonesa</title>
+  </head>
+  <body>
+    <!-- Canvas for subtle golden ember dust (no pink heart-like petals) -->
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+    <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+    <!-- Top Announcement Bar (Clean, Elegant) -->
+    <aside class="announcement-bar" aria-label="Información de servicio">
+      <div class="announcement-inner">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span class="announcement-text" data-i18n="announcement">Pérez Zeledón & Bijagua · Horario: Lun-Jue 11am–9pm | Vie-Dom 11am–10pm</span>
+        <span class="announcement-sep" aria-hidden="true">◆</span>
+        <a href="https://wa.me/50683326370" target="_blank" rel="noopener" class="announcement-wa-link">
+          <svg class="wa-icon-xs" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+          </svg>
+          <span>WhatsApp Pedidos: +506 8332-6370</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header" id="top">
+      <div class="header-shell">
+        <a class="brand" href="#top" aria-label="Kingyo Sushi & Fusión — Inicio">
+          <img class="brand-seal" src="logo%20circular%20Kingyo.jpg" alt="Sello circular Kingyo" width="44" height="44" />
+          <!-- White Letters as requested -->
+          <img class="brand-letters" src="assets/logo-letters-white-tight.png" alt="KINGYO Sushi & Fusion" height="34" />
+        </a>
+
+        <!-- Desktop Navigation (Clean, Focused, Uncluttered) -->
+        <nav class="desktop-nav" aria-label="Navegación principal">
+          <a href="#hero" data-i18n="navHome">Inicio</a>
+          <a href="#especialidades" data-i18n="navSpecialties">Especialidades</a>
+          <a href="#menu-completo" data-i18n="navMenu">Menú Digital</a>
+          <a href="#horarios" data-i18n="navHours">Horarios</a>
+          <a href="#sedes" data-i18n="navLocations">Sedes</a>
+        </nav>
+
+        <!-- Social Icons in Header (Gold/Neutral Theme, Perfectly Centered) -->
+        <div class="header-socials">
+          <a href="https://www.facebook.com/KingyoPZ" target="_blank" rel="noopener" class="header-social-link" aria-label="Facebook Kingyo PZ" title="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.361H7.332v3.209h2.753v8.196h3.312z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/kingyopz/" target="_blank" rel="noopener" class="header-social-link" aria-label="Instagram Kingyo PZ" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <!-- Language Selector -->
+          <button class="language-switch" type="button" id="language-toggle" aria-label="Cambiar idioma" aria-pressed="false">
+            <span class="language-active">ES</span><span aria-hidden="true">/</span><span>EN</span>
+          </button>
+
+          <!-- Book a Table / Reservation CTA -->
+          <button class="header-reserve-btn" type="button" id="open-reserve-btn" data-i18n="reserveTable">Reservar Mesa</button>
+
+          <!-- Fast WhatsApp CTA with Official WhatsApp SVG -->
+          <a class="header-cta" href="https://wa.me/50683326370" target="_blank" rel="noopener" data-i18n="orderShort">
+            <svg class="wa-official-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+            </svg>
+            <span data-i18n="orderCta">Pedir</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle Button -->
+          <button class="mobile-menu-btn" type="button" id="mobile-menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-nav-drawer">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide-down Mobile Navigation Drawer -->
+      <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+        <div class="mobile-nav-inner">
+          <nav class="mobile-nav-links">
+            <a href="#hero" class="mobile-nav-link" data-i18n="navHome">Inicio</a>
+            <a href="#especialidades" class="mobile-nav-link" data-i18n="navSpecialties">Especialidades</a>
+            <a href="#menu-completo" class="mobile-nav-link" data-i18n="navMenu">Menú Digital</a>
+            <a href="#horarios" class="mobile-nav-link" data-i18n="navHours">Horarios</a>
+            <a href="#sedes" class="mobile-nav-link" data-i18n="navLocations">Sedes</a>
+          </nav>
+          
+          <div class="mobile-nav-socials">
+            <a href="https://www.facebook.com/KingyoPZ" target="_blank" rel="noopener" class="mobile-social-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.361H7.332v3.209h2.753v8.196h3.312z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/kingyopz/" target="_blank" rel="noopener" class="mobile-social-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/50683326370" target="_blank" rel="noopener" class="mobile-social-btn highlight">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+          <button class="btn btn-gold btn-block mobile-reserve-btn" type="button" id="mobile-open-reserve">
+            Reservar Mesa VIP
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-bg-media" aria-hidden="true">
+          <img src="assets/kingyo-sushi-hero.png" alt="" />
+          <div class="hero-vignette"></div>
+          <div class="hero-seigaiha-overlay"></div>
+        </div>
+
+        <div class="hero-container section-shell">
+          <div class="hero-content">
+            <!-- Social Proof Pill -->
+            <div class="hero-badge reveal">
+              <span class="gold-stars">★★★★★</span>
+              <span class="badge-score">4.6</span>
+              <span class="badge-text" data-i18n="heroReviews">870+ Reseñas en Google · Pérez Zeledón</span>
+            </div>
+
+            <!-- Authentic Kingyo Brand Seal (Centered with subtle border) -->
+            <div class="hero-logo-lockup reveal">
+              <div class="hero-logo-frame">
+                <img class="hero-fish-logo" src="assets/logo-kingyo-dark.png" alt="Kingyo Sushi & Fusión Logo Oficial" />
+              </div>
+            </div>
+
+            <h1 id="hero-title" class="reveal" data-i18n="heroTitle">
+              El Arte del Sushi <br />
+              <span class="hero-highlight">& la Fusión Imperial.</span>
+            </h1>
+
+            <p class="hero-subtitle reveal" data-i18n="heroSubtitle">
+              Calidad, sabor y tradición en cada pieza. La más refinada experiencia de gastronomía japonesa y cocina fusión en Pérez Zeledón y Bijagua.
+            </p>
+
+            <div class="hero-actions reveal">
+              <a class="btn btn-gold" href="#especialidades" data-i18n="exploreMenu">
+                <span>Ver Especialidades</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </a>
+              <button class="btn btn-glass" type="button" id="hero-reserve-btn" data-i18n="bookVip">
+                <span>Reservar Mesa VIP</span>
+              </button>
+            </div>
+
+            <!-- Trust / Feature Indicators -->
+            <div class="hero-pillars reveal">
+              <div class="pillar-card">
+                <span class="pillar-kanji">鮮</span>
+                <div>
+                  <strong data-i18n="pillar1Title">Pesca Fresca Diaria</strong>
+                  <p data-i18n="pillar1Desc">Atún rojo, salmón y cortes grado sashimi</p>
+                </div>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-kanji">匠</span>
+                <div>
+                  <strong data-i18n="pillar2Title">Técnica de Autor</strong>
+                  <p data-i18n="pillar2Desc">Recetas originales y salsas artesanales</p>
+                </div>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-kanji">二</span>
+                <div>
+                  <strong data-i18n="pillar3Title">2 Sedes en Costa Rica</strong>
+                  <p data-i18n="pillar3Desc">Pérez Zeledón & Bijagua</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Floating 3D Showcase Card -->
+          <div class="hero-showcase reveal" data-tilt>
+            <div class="showcase-glow" aria-hidden="true"></div>
+            <div class="showcase-card">
+              <div class="showcase-tag">
+                <span class="tag-kanji">金魚</span>
+                <span data-i18n="chefSelection">Selección del Chef</span>
+              </div>
+              <div class="showcase-image-wrap">
+                <img src="assets/uramaki-black-gold.jpg" alt="Uramaki Black Gold con láminas de oro y salmón" />
+                <div class="showcase-reflection"></div>
+              </div>
+              <div class="showcase-meta">
+                <div class="showcase-info">
+                  <h3>Uramaki Black Gold</h3>
+                  <p data-i18n="showcaseShortDesc">Arroz negro imperial, salmón, ikura y destellos de oro comestible</p>
+                </div>
+                <div class="showcase-price-box">
+                  <span class="price-label" data-i18n="priceFrom">Desde</span>
+                  <span class="price-amount">₡7.500</span>
+                </div>
+              </div>
+              <button class="showcase-add-btn" type="button" data-add="black-gold" data-i18n="addToCart">
+                + Agregar a Selección
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-down-cue" href="#especialidades" aria-label="Desplazarse hacia abajo">
+          <span data-i18n="scrollCue">Descubrir</span>
+          <span class="cue-line"></span>
+        </a>
+      </section>
+
+      <!-- JAPANESE BRUSHSTROKE CALLIGRAPHY BANNER -->
+      <section class="kanji-banner" aria-label="Lema de la casa">
+        <div class="banner-track">
+          <div class="banner-content">
+            <span class="kanji-large">刺身</span>
+            <span class="kanji-text" data-i18n="ribbon1">SASHIMI FRESCO</span>
+            <span class="kanji-sep">◆</span>
+            <span class="kanji-large">伝統</span>
+            <span class="kanji-text" data-i18n="ribbon2">TRADICIÓN MILENARIA</span>
+            <span class="kanji-sep">◆</span>
+            <span class="kanji-large">融合</span>
+            <span class="kanji-text" data-i18n="ribbon3">FUSIÓN CONTEMPORÁNEA</span>
+            <span class="kanji-sep">◆</span>
+            <span class="kanji-large">金魚</span>
+            <span class="kanji-text" data-i18n="ribbon4">CALIDAD · SABOR · TRADICIÓN</span>
+            <span class="kanji-sep">◆</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: ESPECIALIDADES DE LA CARTA (IMG_7766.JPEG & IMG_7765.JPEG) -->
+      <section class="specialties-section" id="especialidades" aria-labelledby="specialties-title">
+        <div class="japanese-frame-top" aria-hidden="true">
+          <svg class="seigaiha-svg" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 Q30,0 60,30 T120,30 T180,30 T240,30 T300,30 T360,30 T420,30 T480,30 T540,30 T600,30 T660,30 T720,30 T780,30 T840,30 T900,30 T960,30 T1020,30 T1080,30 T1140,30 T1200,30" fill="none" stroke="rgba(214, 173, 88, 0.25)" stroke-width="1.5"></path>
+          </svg>
+        </div>
+
+        <div class="section-shell">
+          <!-- Official Menu Header Re-creation with Geometric Gold Flourish (No Hearts) -->
+          <div class="menu-cover-header reveal">
+            <div class="menu-brand-header">
+              <img class="menu-header-fish" src="assets/logo-fish-transparent.png" alt="Símbolo Kingyo" width="86" />
+              <img class="menu-header-letters" src="assets/logo-wordmark-gold.png" alt="KINGYO Sushi & Fusion" height="34" />
+              <div class="japanese-seal" aria-hidden="true">
+                <span>金魚</span>
+                <span class="seal-sushi">鮨</span>
+              </div>
+            </div>
+
+            <!-- Gold Embossed Menu Header -->
+            <div class="gold-title-wrap">
+              <div class="gold-line left"></div>
+              <div class="gold-flourish-star">✦</div>
+              <h2 id="specialties-title" class="gold-embossed-title" data-i18n="menuSpecialtiesTitle">ESPECIALIDADES</h2>
+              <div class="gold-flourish-star">✦</div>
+              <div class="gold-line right"></div>
+            </div>
+            
+            <p class="specialties-subtitle" data-i18n="menuSpecialtiesDesc">
+              Nuestras creaciones insignia extraídas directamente de la carta oficial de Kingyo.
+            </p>
+
+            <!-- Dual Pricing Switcher -->
+            <div class="pricing-mode-toggle" role="group" aria-label="Modalidad de consumo y precios">
+              <button type="button" class="mode-btn active" data-mode="takeout" id="mode-takeout">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span data-i18n="modeTakeaway">Para Llevar / Express</span>
+              </button>
+              <button type="button" class="mode-btn" data-mode="service" id="mode-service">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                <span data-i18n="modeDineIn">Consumo en Mesa (+10% servicio)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- THE 3 VERIFIED MASTER DISHES (IMG_7766.JPEG) -->
+          <div class="specialties-cards-grid">
+            
+            <!-- 1. TORRE KINGYO -->
+            <article class="specialty-card reveal" data-item="torre" data-tilt>
+              <div class="card-corner-kanji">壱</div>
+              <div class="card-media-wrap">
+                <img class="card-dish-img" src="assets/torre-kingyo-menu.jpg" alt="Torre Kingyo: arroz de sushi, atún, salmón, calamares y camarones tempura" loading="lazy" />
+                <div class="card-reflection"></div>
+                <span class="card-badge gold" data-i18n="cardBadgeSignature">Plato Insignia</span>
+              </div>
+              <div class="card-body">
+                <div class="card-heading-group">
+                  <div class="card-title-row">
+                    <span class="gold-bullet">✦</span>
+                    <h3>Torre Kingyo</h3>
+                    <span class="card-jp-tag">金魚タワー</span>
+                  </div>
+                  <p class="card-description" data-i18n="torreDesc">
+                    Suculenta torre de arroz de sushi, ensalada de kanimi, atún fresco, salmón fresco y aguacate. Calamares tempura y camarones tempura. Cubierta con salsas de la casa.
+                  </p>
+                </div>
+
+                <div class="card-price-container">
+                  <div class="price-pill-row">
+                    <div class="price-pill active-pill">
+                      <span class="pill-label" data-i18n="pillTakeout">Para llevar</span>
+                      <strong class="pill-amount" data-takeout="6500">₡6.500</strong>
+                    </div>
+                    <div class="price-pill service-pill">
+                      <span class="pill-label" data-i18n="pillService">Con 10% servicio</span>
+                      <strong class="pill-amount" data-service="7150">₡7.150</strong>
+                    </div>
+                  </div>
+                  <button class="btn-add-item" type="button" data-add="torre" aria-label="Agregar Torre Kingyo al pedido">
+                    <span data-i18n="addToOrder">+ Agregar al Pedido</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. ENSALADA NEPTUNO -->
+            <article class="specialty-card reveal" data-item="neptuno" data-tilt>
+              <div class="card-corner-kanji">弐</div>
+              <div class="card-media-wrap">
+                <img class="card-dish-img" src="assets/ensalada-neptuno-menu.jpg" alt="Ensalada Neptuno: wakame, kanikama, salmón, atún y aguacate en salsa de anguila" loading="lazy" />
+                <div class="card-reflection"></div>
+                <span class="card-badge crimson" data-i18n="cardBadgeFresh">Frescura Marina</span>
+              </div>
+              <div class="card-body">
+                <div class="card-heading-group">
+                  <div class="card-title-row">
+                    <span class="gold-bullet">✦</span>
+                    <h3>Ensalada Neptuno</h3>
+                    <span class="card-jp-tag">海王サラダ</span>
+                  </div>
+                  <p class="card-description" data-i18n="neptunoDesc">
+                    Delicioso mix de wakame y kanikama. Cubierto de trocitos de salmón, trocitos de atún y trocitos de aguacate. Cubierta de salsa de anguila.
+                  </p>
+                </div>
+
+                <div class="card-price-container">
+                  <div class="price-pill-row">
+                    <div class="price-pill active-pill">
+                      <span class="pill-label" data-i18n="pillTakeout">Para llevar</span>
+                      <strong class="pill-amount" data-takeout="6500">₡6.500</strong>
+                    </div>
+                    <div class="price-pill service-pill">
+                      <span class="pill-label" data-i18n="pillService">Con 10% servicio</span>
+                      <strong class="pill-amount" data-service="7150">₡7.150</strong>
+                    </div>
+                  </div>
+                  <button class="btn-add-item" type="button" data-add="neptuno" aria-label="Agregar Ensalada Neptuno al pedido">
+                    <span data-i18n="addToOrder">+ Agregar al Pedido</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. SUSHI BURGER -->
+            <article class="specialty-card reveal" data-item="burger" data-tilt>
+              <div class="card-corner-kanji">参</div>
+              <div class="card-media-wrap">
+                <img class="card-dish-img" src="assets/sushi-burger-menu.jpg" alt="Sushi Burger: hamburguesa con arroz crocante y proteína a elegir" loading="lazy" />
+                <div class="card-reflection"></div>
+                <span class="card-badge amber" data-i18n="cardBadgeFusion">Fusión de Autor</span>
+              </div>
+              <div class="card-body">
+                <div class="card-heading-group">
+                  <div class="card-title-row">
+                    <span class="gold-bullet">✦</span>
+                    <h3>Sushi Burger</h3>
+                    <span class="card-jp-tag">寿司バーガー</span>
+                  </div>
+                  <p class="card-description" data-i18n="burgerDesc">
+                    Fusión asiática americana servida en forma de hamburguesa. Disponible con las siguientes proteínas: pollo, camarón, atún y salmón.
+                  </p>
+                </div>
+
+                <div class="card-price-container">
+                  <div class="price-pill-row">
+                    <div class="price-pill active-pill">
+                      <span class="pill-label" data-i18n="pillTakeout">Para llevar</span>
+                      <strong class="pill-amount" data-takeout="5000">₡5.000</strong>
+                    </div>
+                    <div class="price-pill service-pill">
+                      <span class="pill-label" data-i18n="pillService">Con 10% servicio</span>
+                      <strong class="pill-amount" data-service="5500">₡5.500</strong>
+                    </div>
+                  </div>
+                  <button class="btn-add-item" type="button" data-add="burger" aria-label="Agregar Sushi Burger al pedido">
+                    <span data-i18n="addToOrder">+ Agregar al Pedido</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: "CHOOSE YOUR ROLL" (Kaizen Style) -->
+      <section class="kaizen-rolls-section" id="choose-roll" aria-labelledby="choose-roll-title">
+        <div class="section-shell">
+          <div class="kaizen-head reveal">
+            <span class="kaizen-tagline" data-i18n="kaizenTagline">EXPERIENCIA OMAKASE & AUTOR</span>
+            <h2 id="choose-roll-title" data-i18n="chooseRollTitle">ELIGE TU ROLL</h2>
+            <p class="kaizen-subtitle" data-i18n="chooseRollSubtitle">Cuatro estados de ánimo. Una elección perfecta.</p>
+          </div>
+
+          <!-- 4 Stone Plinths Grid -->
+          <div class="pedestals-grid">
+            <!-- Roll 01 -->
+            <div class="pedestal-card reveal" data-item="black-gold" data-tilt>
+              <div class="pedestal-number">01</div>
+              <div class="pedestal-stone">
+                <img src="assets/uramaki-black-gold.jpg" alt="Uramaki Black Gold con arroz negro y láminas de oro" loading="lazy" />
+                <div class="pedestal-shadow"></div>
+              </div>
+              <div class="pedestal-meta">
+                <span class="roll-mood" data-i18n="mood1">OPULENCIA & MISTERIO</span>
+                <h3>Uramaki Black Gold</h3>
+                <p data-i18n="roll1Ingredients">Arroz negro prohibido, salmón fresco, ikura y oro comestible</p>
+                <div class="pedestal-price-row">
+                  <span class="pedestal-price" data-takeout="7500">₡7.500</span>
+                  <button class="pedestal-add" type="button" data-add="black-gold" aria-label="Agregar Black Gold">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Roll 02 -->
+            <div class="pedestal-card reveal" data-item="dragon" data-tilt>
+              <div class="pedestal-number">02</div>
+              <div class="pedestal-stone">
+                <img src="assets/dragon-roll-luxury.jpg" alt="Dragon Roll con anguila caramelizada y aguacate" loading="lazy" />
+                <div class="pedestal-shadow"></div>
+              </div>
+              <div class="pedestal-meta">
+                <span class="roll-mood" data-i18n="mood2">INTENSIDAD & FUEGO</span>
+                <h3>Dragon Roll Imperial</h3>
+                <p data-i18n="roll2Ingredients">Anguila unagi glaseada, langostino tempura, aguacate y salsa tare</p>
+                <div class="pedestal-price-row">
+                  <span class="pedestal-price" data-takeout="6900">₡6.900</span>
+                  <button class="pedestal-add" type="button" data-add="dragon" aria-label="Agregar Dragon Roll">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Roll 03 -->
+            <div class="pedestal-card reveal" data-item="ebi-flambe" data-tilt>
+              <div class="pedestal-number">03</div>
+              <div class="pedestal-stone">
+                <img src="assets/ebi-flambe-roll.jpg" alt="Uramaki Ebi Flambé con salmón sellado a la llama" loading="lazy" />
+                <div class="pedestal-shadow"></div>
+              </div>
+              <div class="pedestal-meta">
+                <span class="roll-mood" data-i18n="mood3">AHUMADO & CREMOSO</span>
+                <h3>Uramaki Ebi Flambé</h3>
+                <p data-i18n="roll3Ingredients">Camarón crocante, salmón sellado al soplete y mayonesa trufada</p>
+                <div class="pedestal-price-row">
+                  <span class="pedestal-price" data-takeout="6500">₡6.500</span>
+                  <button class="pedestal-add" type="button" data-add="ebi-flambe" aria-label="Agregar Ebi Flambé">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Roll 04 -->
+            <div class="pedestal-card reveal" data-item="spicy-tuna" data-tilt>
+              <div class="pedestal-number">04</div>
+              <div class="pedestal-stone">
+                <img src="assets/kingyo-sushi-craft.png" alt="Spicy Tuna Tartare con atún rojo y togarashi" loading="lazy" />
+                <div class="pedestal-shadow"></div>
+              </div>
+              <div class="pedestal-meta">
+                <span class="roll-mood" data-i18n="mood4">FRESCURA & PICANTE</span>
+                <h3>Spicy Tuna Tartare</h3>
+                <p data-i18n="roll4Ingredients">Atún rojo fresco en cubos, togarashi japonés, aguacate y cebollino</p>
+                <div class="pedestal-price-row">
+                  <span class="pedestal-price" data-takeout="6200">₡6.200</span>
+                  <button class="pedestal-add" type="button" data-add="spicy-tuna" aria-label="Agregar Spicy Tuna">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: HORARIOS DE ATENCIÓN (NEW DEDICATED SECTION) -->
+      <section class="hours-section" id="horarios" aria-labelledby="hours-title">
+        <div class="section-shell">
+          <div class="hours-card-container reveal">
+            <div class="hours-head">
+              <span class="section-pretitle" data-i18n="hoursPre">ATENCIÓN & SERVICIO</span>
+              <h2 id="hours-title" data-i18n="hoursTitle">HORARIOS DE APERTURA</h2>
+              <p data-i18n="hoursDesc">Te esperamos para vivir la experiencia Kingyo en salón, para llevar o express a domicilio.</p>
+            </div>
+
+            <div class="hours-cards-grid">
+              <!-- Pérez Zeledón Hours -->
+              <div class="hours-box main-branch">
+                <div class="hours-branch-title">
+                  <span class="branch-pin">📍</span>
+                  <div>
+                    <h3>Sede Pérez Zeledón</h3>
+                    <span class="branch-status-live">● Abierto Hoy</span>
+                  </div>
+                </div>
+
+                <div class="schedule-table">
+                  <div class="schedule-entry">
+                    <span class="day-label" data-i18n="daysMonThu">Lunes a Jueves</span>
+                    <strong class="time-label">11:00 am – 9:00 pm</strong>
+                  </div>
+                  <div class="schedule-entry weekend">
+                    <span class="day-label" data-i18n="daysFriSun">Viernes a Domingo</span>
+                    <strong class="time-label">11:00 am – 10:00 pm</strong>
+                  </div>
+                </div>
+
+                <div class="hours-services-list">
+                  <span>✓ Salón y Mesa</span>
+                  <span>✓ Para Llevar</span>
+                  <span>✓ Servicio Express</span>
+                </div>
+
+                <a class="hours-call-cta" href="tel:+50627716869">
+                  <span>Llamar al restaurante:</span>
+                  <strong>2771-6869</strong>
+                </a>
+              </div>
+
+              <!-- Bijagua Hours & Consult -->
+              <div class="hours-box secondary-branch">
+                <div class="hours-branch-title">
+                  <span class="branch-pin">📍</span>
+                  <div>
+                    <h3>Sede Bijagua</h3>
+                    <span class="branch-status-info">● Segunda Sede</span>
+                  </div>
+                </div>
+
+                <p class="bijagua-hours-note" data-i18n="bijaguaHoursNote">
+                  Atención especial y servicio de gastronomía japonesa en Bijagua. Consulta la disponibilidad del día y pedidos express directamente.
+                </p>
+
+                <div class="bijagua-direct-cta">
+                  <a class="btn btn-gold btn-block" href="https://wa.me/50683326370?text=Hola%20Kingyo!%20Quisiera%20consultar%20el%20horario%20y%20menú%20de%20la%20sede%20Bijagua" target="_blank" rel="noopener">
+                    <svg class="wa-official-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+                    </svg>
+                    <span>Consultar Bijagua por WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: CRAFT PHILOSOPHY & SUSHI BOAT -->
+      <section class="philosophy-section" id="filosofia" aria-labelledby="philosophy-title">
+        <div class="section-shell">
+          <div class="philosophy-grid">
+            <div class="philosophy-copy reveal">
+              <span class="section-pretitle" data-i18n="craftPretitle">EL RITUAL DEL SUSHI</span>
+              <h2 id="philosophy-title" data-i18n="craftTitle">Tradición Japonesa, Alma de Pérez Zeledón.</h2>
+              <p data-i18n="craftText1">
+                En Kingyo no solo servimos sushi; honramos un arte que exige disciplina en cada corte de pescado, equilibrio en la acidez del arroz y respeto absoluto por los ingredientes más nobles.
+              </p>
+              <p data-i18n="craftText2">
+                Nuestra carta fusiona la pureza técnica del Edo-mae japonés con la generosidad y el paladar vibrante de Costa Rica, creando momentos memorables en cada mesa.
+              </p>
+
+              <div class="craft-points">
+                <div class="point-item">
+                  <span class="point-icon">🔪</span>
+                  <div>
+                    <h4 data-i18n="point1Title">Corte de Precisión</h4>
+                    <p data-i18n="point1Desc">Cortes milimétricos que respetan la fibra del salmón y el atún.</p>
+                  </div>
+                </div>
+                <div class="point-item">
+                  <span class="point-icon">🌾</span>
+                  <div>
+                    <h4 data-i18n="point2Title">Arroz Sazonado Secreto</h4>
+                    <p data-i18n="point2Desc">Preparado diariamente con vinagre de arroz selecto a temperatura óptima.</p>
+                  </div>
+                </div>
+                <div class="point-item">
+                  <span class="point-icon">🥢</span>
+                  <div>
+                    <h4 data-i18n="point3Title">Para Compartir en Familia</h4>
+                    <p data-i18n="point3Desc">Nuestros emblemáticos barcos de sushi son la cúspide de la celebración.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="philosophy-boat reveal" data-tilt>
+              <div class="boat-glow" aria-hidden="true"></div>
+              <div class="boat-image-container">
+                <img src="assets/sushi-boat-luxury.jpg" alt="Barco Imperial de Sushi Kingyo servido con vapor aromático" loading="lazy" />
+                <div class="boat-overlay">
+                  <span class="boat-tag">金魚の船</span>
+                  <h3>Barco Imperial Kingyo</h3>
+                  <p data-i18n="boatDesc">Selección magistral de nigiris, uramakis de autor y sashimis para compartir.</p>
+                  <button class="btn btn-gold btn-sm" type="button" data-add="barco-kingyo" data-i18n="addBoat">
+                    <span>Pedir Barco Imperial</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: COMPLETE DIGITAL MENU -->
+      <section class="menu-digital-section" id="menu-completo" aria-labelledby="digital-menu-title">
+        <div class="section-shell">
+          <div class="menu-digital-head reveal">
+            <div>
+              <span class="section-pretitle" data-i18n="menuDigitalPre">EXPLORACIÓN GASTRONÓMICA</span>
+              <h2 id="digital-menu-title" data-i18n="menuDigitalTitle">CARTA COMPLETA DIGITAL</h2>
+              <p data-i18n="menuDigitalIntro">Buscá por ingrediente, roll favorito o categoría. Podés armar tu pedido y enviarlo directo por WhatsApp.</p>
+            </div>
+
+            <div class="price-mode-badge" id="price-mode-indicator">
+              <span data-i18n="showingPricesFor">Mostrando precios para:</span>
+              <strong id="current-mode-label" data-i18n="takeaway">Para Llevar</strong>
+            </div>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="menu-controls-toolbar reveal">
+            <div class="search-input-wrap">
+              <svg class="search-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="search" id="menu-search-input" placeholder="Buscar por salmón, atún, trufa, tempura, etc…" autocomplete="off" data-i18n-placeholder="searchPlaceholder" />
+              <button type="button" id="clear-search-btn" class="clear-search-btn" aria-label="Limpiar búsqueda" style="display:none;">✕</button>
+            </div>
+
+            <div class="category-pills-wrap" role="group" aria-label="Filtro de categorías">
+              <button type="button" class="cat-pill active" data-category="all" data-i18n="catAll">Todos</button>
+              <button type="button" class="cat-pill" data-category="specialties" data-i18n="catSpecialties">Especialidades</button>
+              <button type="button" class="cat-pill" data-category="flambe" data-i18n="catFlambe">Rolls Flambé</button>
+              <button type="button" class="cat-pill" data-category="uramaki" data-i18n="catUramaki">Uramaki & Autor</button>
+              <button type="button" class="cat-pill" data-category="fresh" data-i18n="catFresh">Ensaladas & Frescos</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Grid Container -->
+          <div class="dark-menu-grid" id="menu-items-grid" aria-live="polite"></div>
+
+          <p class="menu-disclaimer reveal" data-i18n="menuDisclaimer">
+            * Precios expresados en Colones costarricenses (₡). Los precios de consumo en mesa incluyen el 10% por servicio de ley. Disponibilidad sujeta al stock fresco del día.
+          </p>
+        </div>
+      </section>
+
+      <!-- SOCIAL PROOF & STATS STRIP -->
+      <section class="social-proof-strip" aria-label="Reconocimientos y opiniones">
+        <div class="section-shell">
+          <div class="stats-row">
+            <div class="stat-box">
+              <strong class="stat-number">4.6 ★</strong>
+              <span class="stat-label" data-i18n="statGoogle">Calificación de excelencia en Google</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-box">
+              <strong class="stat-number">870+</strong>
+              <span class="stat-label" data-i18n="statReviews">Opiniones de comensales satisfechos</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-box">
+              <strong class="stat-number">2 Sedes</strong>
+              <span class="stat-label" data-i18n="statBranches">Pérez Zeledón y Bijagua</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-box">
+              <strong class="stat-number">100%</strong>
+              <span class="stat-label" data-i18n="statCraft">Ingredientes frescos y de primera calidad</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: SEDES / LOCATIONS (Verified Data) -->
+      <section class="locations-section" id="sedes" aria-labelledby="locations-title">
+        <div class="section-shell">
+          <div class="locations-header reveal">
+            <span class="section-pretitle" data-i18n="locationsPre">NUESTRAS CASAS</span>
+            <h2 id="locations-title" data-i18n="locationsTitle">VISÍTANOS EN COSTA RICA</h2>
+            <p data-i18n="locationsDesc">Disfruta de la atmósfera Kingyo en nuestras dos ubicaciones o solicita express directo a tu puerta.</p>
+          </div>
+
+          <!-- Tabs for PZ and Bijagua -->
+          <div class="locations-tabs-bar reveal" role="tablist">
+            <button class="loc-tab-btn active" type="button" role="tab" id="tab-btn-pz" aria-selected="true" aria-controls="panel-pz" data-tab="pz">
+              <span>📍 Pérez Zeledón</span>
+            </button>
+            <button class="loc-tab-btn" type="button" role="tab" id="tab-btn-bijagua" aria-selected="false" aria-controls="panel-bijagua" data-tab="bijagua">
+              <span>📍 Bijagua</span>
+            </button>
+          </div>
+
+          <!-- Panel 1: Pérez Zeledón -->
+          <div class="location-card active reveal" id="panel-pz" role="tabpanel" aria-labelledby="tab-btn-pz">
+            <div class="location-details">
+              <div class="loc-badge-row">
+                <span class="loc-status-pill open" data-i18n="locOpenNow">● Abierto Hoy</span>
+                <span class="loc-city-pill">San Isidro de El General</span>
+              </div>
+              
+              <h3>Sede Pérez Zeledón</h3>
+              <p class="loc-address-text" data-i18n="pzAddressText">
+                150 metros este del Estadio Municipal, diagonal al puente Los Reyes.
+              </p>
+
+              <div class="loc-hours-card">
+                <div class="hours-row">
+                  <span data-i18n="daysMonThu">Lunes a Jueves:</span>
+                  <strong>11:00 am – 9:00 pm</strong>
+                </div>
+                <div class="hours-row">
+                  <span data-i18n="daysFriSun">Viernes a Domingo:</span>
+                  <strong>11:00 am – 10:00 pm</strong>
+                </div>
+              </div>
+
+              <div class="loc-contacts-grid">
+                <a class="contact-pill-link" href="https://wa.me/50683326370" target="_blank" rel="noopener">
+                  <svg class="wa-official-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+                  </svg>
+                  <div>
+                    <span class="contact-type">WhatsApp Pedidos</span>
+                    <strong>+506 8332-6370</strong>
+                  </div>
+                </a>
+                <a class="contact-pill-link" href="tel:+50627716869">
+                  <span class="contact-icon">📞</span>
+                  <div>
+                    <span class="contact-type" data-i18n="phoneLabel">Teléfono Fijo</span>
+                    <strong>2771-6869</strong>
+                  </div>
+                </a>
+              </div>
+
+              <div class="loc-actions-row">
+                <a class="btn btn-gold btn-sm" href="https://www.google.com/maps/search/?api=1&query=Kingyo+Sushi+Perez+Zeledon+Costa+Rica" target="_blank" rel="noopener" data-i18n="openGoogleMaps">
+                  <span>Abrir en Google Maps</span> ↗
+                </a>
+                <a class="btn btn-glass btn-sm" href="https://waze.com/ul?q=Kingyo%20Sushi%20Perez%20Zeledon" target="_blank" rel="noopener" data-i18n="openWaze">
+                  <span>Abrir en Waze</span> ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="location-map-visual" aria-hidden="true">
+              <div class="map-grid-bg"></div>
+              <div class="map-pulse-marker">
+                <span class="pulse-ring"></span>
+                <img src="logo%20circular%20Kingyo.jpg" alt="" class="map-marker-seal" />
+              </div>
+              <div class="map-caption">
+                <strong>Kingyo Pérez Zeledón</strong>
+                <span>Estadio Municipal · San Isidro</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Bijagua with Verified Direct Google Maps Link -->
+          <div class="location-card reveal" id="panel-bijagua" role="tabpanel" aria-labelledby="tab-btn-bijagua" style="display:none;">
+            <div class="location-details">
+              <div class="loc-badge-row">
+                <span class="loc-status-pill info" data-i18n="locBranchBijagua">● Segunda Sede Oficial</span>
+                <span class="loc-city-pill">Bijagua, Alajuela</span>
+              </div>
+              
+              <h3>Sushi Kingyo Bijagua</h3>
+              <p class="loc-address-text" data-i18n="bijaguaAddressText">
+                Ubicados en Bijagua. Disfruta de la mejor cocina japonesa y sushi en una atmósfera rodeada de naturaleza. Consulta directamente por WhatsApp para horarios de hoy, disponibilidad y pedidos a domicilio.
+              </p>
+
+              <div class="loc-contacts-grid">
+                <a class="contact-pill-link" href="https://wa.me/50683326370" target="_blank" rel="noopener">
+                  <svg class="wa-official-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+                  </svg>
+                  <div>
+                    <span class="contact-type">WhatsApp Bijagua</span>
+                    <strong>+506 8332-6370</strong>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Real Google Maps link supplied by user -->
+              <div class="loc-actions-row">
+                <a class="btn btn-gold btn-sm" href="https://www.google.com/maps/place/Sushi+Kingyo+Bijagua/@10.8007301,-85.0913515,31275m/data=!3m1!1e3!4m8!3m7!1s0x8f75510ffa48dfcb:0xeb82400f073a35f2!8m2!3d10.7352265!4d-85.0504999!9m1!1b1!16s%2Fg%2F11xmqvwvb0?entry=ttu" target="_blank" rel="noopener" data-i18n="openBijaguaMaps">
+                  <span>Abrir en Google Maps (Bijagua)</span> ↗
+                </a>
+                <a class="btn btn-glass btn-sm" href="https://wa.me/50683326370?text=Hola%20Kingyo!%20Quisiera%20consultar%20sobre%20la%20sede%20de%20Bijagua" target="_blank" rel="noopener" data-i18n="consultBijagua">
+                  <span>Consultar por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="location-map-visual" aria-hidden="true">
+              <div class="map-grid-bg"></div>
+              <div class="map-pulse-marker">
+                <span class="pulse-ring"></span>
+                <img src="logo%20circular%20Kingyo.jpg" alt="" class="map-marker-seal" />
+              </div>
+              <div class="map-caption">
+                <strong>Sushi Kingyo Bijagua</strong>
+                <span>Alajuela · Costa Rica</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VIP RESERVATION MODAL / DIALOG -->
+      <dialog class="reserve-dialog" id="reserve-modal" aria-labelledby="reserve-dialog-title">
+        <div class="reserve-dialog-content">
+          <button class="dialog-close-btn" type="button" id="close-reserve-btn" aria-label="Cerrar modal">✕</button>
+          
+          <div class="dialog-head">
+            <span class="dialog-kanji">予約</span>
+            <h3 id="reserve-dialog-title" data-i18n="reserveTitle">Reservación de Mesa VIP</h3>
+            <p data-i18n="reserveDesc">Coordina tu experiencia gastronómica o celebración en Kingyo directamente con nuestro equipo.</p>
+          </div>
+
+          <form id="reserve-form" class="reserve-form">
+            <div class="form-row">
+              <label>
+                <span data-i18n="formName">Nombre Completo</span>
+                <input type="text" id="reserve-name" required placeholder="Tu nombre" />
+              </label>
+              <label>
+                <span data-i18n="formBranch">Sede</span>
+                <select id="reserve-branch">
+                  <option value="Pérez Zeledón">Pérez Zeledón</option>
+                  <option value="Bijagua">Bijagua</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                <span data-i18n="formDate">Fecha</span>
+                <input type="date" id="reserve-date" required />
+              </label>
+              <label>
+                <span data-i18n="formTime">Hora Aproximada</span>
+                <input type="time" id="reserve-time" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                <span data-i18n="formPeople">Número de Personas</span>
+                <select id="reserve-people">
+                  <option value="2 personas">2 personas</option>
+                  <option value="3 a 4 personas">3 a 4 personas</option>
+                  <option value="5 a 8 personas">5 a 8 personas</option>
+                  <option value="Grupo grande (+8)">Grupo grande (+8)</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="formOccasion">Ocasión</span>
+                <select id="reserve-occasion">
+                  <option value="Cena regular">Cena / Almuerzo</option>
+                  <option value="Cumpleaños">Cumpleaños</option>
+                  <option value="Aniversario">Aniversario</option>
+                  <option value="Reunión de Negocios">Reunión de Negocios</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <span data-i18n="formNotes">Peticiones Especiales (opcional)</span>
+              <textarea id="reserve-notes" rows="2" placeholder="Alergias, mesa preferida, etc…"></textarea>
+            </label>
+
+            <button class="btn btn-gold btn-block" type="submit" data-i18n="confirmReserveWhatsapp">
+              <span>Continuar en WhatsApp</span>
+              <svg class="wa-official-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </dialog>
+
+      <!-- FLOATING PERSISTENT WHATSAPP CART TRIGGER -->
+      <aside class="floating-cart-anchor" aria-label="Acceso al pedido">
+        <button class="cart-floating-btn" id="open-cart-btn" type="button" aria-controls="cart-drawer" aria-expanded="false">
+          <div class="cart-btn-icon-wrap">
+            <svg class="cart-svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H7"></path>
+              <circle cx="10" cy="20" r="1"></circle>
+              <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+            <span class="cart-badge-count" id="cart-counter">0</span>
+          </div>
+          <div class="cart-btn-text">
+            <span class="cart-btn-title" data-i18n="cartTitleShort">Mi Pedido</span>
+            <span class="cart-btn-total" id="cart-quick-total">₡0</span>
+          </div>
+        </button>
+      </aside>
+
+      <!-- SLIDE-OVER WHATSAPP CART DRAWER -->
+      <div class="cart-overlay" id="cart-overlay" hidden></div>
+      <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-drawer-heading" aria-hidden="true">
+        <div class="cart-drawer-header">
+          <div>
+            <span class="cart-pretitle" data-i18n="cartPretitle">SELECCIÓN KINGYO</span>
+            <h2 id="cart-drawer-heading" data-i18n="cartHeading">Pedido por WhatsApp</h2>
+          </div>
+          <button class="cart-drawer-close" id="close-cart-btn" type="button" aria-label="Cerrar pedido">✕</button>
+        </div>
+
+        <div class="cart-mode-card">
+          <span class="cart-mode-label" data-i18n="orderServiceMode">Tipo de consumo:</span>
+          <div class="cart-mode-selector">
+            <button type="button" class="cart-mode-btn active" data-cart-mode="takeout" id="cart-mode-takeout" data-i18n="takeaway">Para Llevar</button>
+            <button type="button" class="cart-mode-btn" data-cart-mode="service" id="cart-mode-service" data-i18n="atTable">En Mesa (+10%)</button>
+          </div>
+        </div>
+
+        <div class="cart-drawer-items" id="cart-items-container" aria-live="polite"></div>
+
+        <div class="cart-drawer-empty" id="cart-empty-message">
+          <div class="empty-icon">🍣</div>
+          <p data-i18n="emptyCart">Aún no has seleccionado ningún plato.</p>
+          <a class="btn btn-gold btn-sm" href="#especialidades" id="empty-see-menu" data-i18n="exploreMenuBtn">Explorar el Menú</a>
+        </div>
+
+        <div class="cart-drawer-footer" id="cart-footer-controls">
+          <div class="cart-breakdown">
+            <div class="breakdown-line">
+              <span data-i18n="subtotal">Subtotal</span>
+              <strong id="cart-subtotal-val">₡0</strong>
+            </div>
+            <div class="breakdown-line service-line-calc" id="cart-service-row" style="display:none;">
+              <span data-i18n="serviceCharge">Servicio de ley (10%)</span>
+              <strong id="cart-service-val">₡0</strong>
+            </div>
+            <div class="breakdown-line total-line">
+              <span data-i18n="totalEstimated">Total Estimado</span>
+              <strong id="cart-total-val">₡0</strong>
+            </div>
+          </div>
+
+          <label class="cart-notes-label">
+            <span data-i18n="cartNotesPrompt">Notas para cocina / entrega (opcional):</span>
+            <input type="text" id="cart-notes-input" placeholder="Ej: salsa de anguila extra, sin jengibre…" />
+          </label>
+
+          <button class="whatsapp-checkout-btn" id="send-whatsapp-order-btn" type="button" disabled>
+            <svg class="wa-official-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+            </svg>
+            <span data-i18n="sendToWhatsApp">Enviar Pedido a WhatsApp</span>
+          </button>
+          
+          <p class="cart-disclaimer" data-i18n="cartDisclaimerText">
+            Se abrirá un chat directo con Kingyo para confirmar disponibilidad, dirección y hora de entrega.
+          </p>
+        </div>
+      </aside>
+    </main>
+
+    <!-- FOOTER WITH REAL LOGO LETTERS AND SOCIAL LINKS -->
+    <footer class="site-footer">
+      <div class="footer-top-wave" aria-hidden="true"></div>
+      
+      <div class="section-shell">
+        <div class="footer-main-grid">
+          
+          <!-- Col 1: Real Wordmark and Fish Brand -->
+          <div class="footer-brand-col">
+            <div class="footer-brand-lockup">
+              <img class="footer-circular-seal" src="logo%20circular%20Kingyo.jpg" alt="Sello Kingyo" width="52" height="52" />
+              <!-- Real Wordmark in Gold in footer -->
+              <img class="footer-real-letters" src="assets/logo-wordmark-gold.png" alt="KINGYO Sushi & Fusion" height="38" />
+            </div>
+            <p class="footer-motto-tag" data-i18n="slogan">Calidad · Sabor · Tradición</p>
+            <p class="footer-brand-desc" data-i18n="footerDesc">
+              El punto de encuentro culinario donde la precisión japonesa y la generosidad costarricense se transforman en una experiencia inolvidable.
+            </p>
+          </div>
+
+          <!-- Col 2: Navigation Links -->
+          <div class="footer-links-col">
+            <h4 data-i18n="footerNavTitle">Explorar</h4>
+            <ul>
+              <li><a href="#hero" data-i18n="navHome">Inicio</a></li>
+              <li><a href="#especialidades" data-i18n="navSpecialties">Especialidades de la Carta</a></li>
+              <li><a href="#choose-roll" data-i18n="navRolls">Rolls de Autor</a></li>
+              <li><a href="#menu-completo" data-i18n="navMenu">Menú Digital & Pedidos</a></li>
+              <li><a href="#horarios" data-i18n="navHours">Horarios</a></li>
+              <li><a href="#sedes" data-i18n="navLocations">Ubicaciones</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Direct Contact & Hours -->
+          <div class="footer-contact-col">
+            <h4 data-i18n="footerContactTitle">Contacto & Sedes</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <span>📍</span> 
+                <div>
+                  <strong>Pérez Zeledón</strong>
+                  <p>150 m este del Estadio Municipal, diagonal al puente Los Reyes</p>
+                </div>
+              </li>
+              <li>
+                <span>📞</span>
+                <div>
+                  <a href="tel:+50627716869">Teléfono: 2771-6869</a>
+                </div>
+              </li>
+              <li>
+                <svg class="wa-icon-inline" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+                </svg>
+                <div>
+                  <a href="https://wa.me/50683326370" target="_blank" rel="noopener">WhatsApp: +506 8332-6370</a>
+                </div>
+              </li>
+              <li>
+                <span>📍</span>
+                <div>
+                  <strong>Bijagua</strong>
+                  <p>Segunda sede oficial Kingyo</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Official Social Links & Google Reviews with Brand SVGs -->
+          <div class="footer-social-col">
+            <h4 data-i18n="footerConnectTitle">Redes Sociales</h4>
+            <div class="footer-social-links">
+              <!-- Facebook Verified Link -->
+              <a href="https://www.facebook.com/KingyoPZ" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook Kingyo PZ">
+                <svg class="social-btn-svg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.361H7.332v3.209h2.753v8.196h3.312z"/>
+                </svg>
+                <span>Facebook @KingyoPZ</span>
+              </a>
+
+              <!-- Instagram Verified Link -->
+              <a href="https://www.instagram.com/kingyopz/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram Kingyo PZ">
+                <svg class="social-btn-svg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram @kingyopz</span>
+              </a>
+
+              <!-- WhatsApp Verified Link with Official SVG -->
+              <a href="https://wa.me/50683326370" target="_blank" rel="noopener" class="social-btn highlight-wa">
+                <svg class="wa-official-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.81-.37-4.04-1.07l-.29-.17-3.11.82.83-3.03-.19-.31a8.196 8.196 0 0 1-1.26-4.48c0-4.54 3.7-8.25 8.24-8.25m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29"/>
+                </svg>
+                <span>WhatsApp Oficial</span>
+              </a>
+
+              <!-- Google Reviews -->
+              <a href="https://www.google.com/maps/search/?api=1&query=Kingyo+Sushi+Perez+Zeledon+Costa+Rica" target="_blank" rel="noopener" class="social-btn">
+                <span>Google Reviews (4.6 ★)</span> ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-bar">
+          <p>© <span id="current-year"></span> Kingyo Sushi & Fusión · Costa Rica. Todos los derechos reservados.</p>
+          <button class="back-to-top-btn" id="back-to-top" type="button" aria-label="Volver arriba">
+            <span data-i18n="backToTop">Volver Arriba</span> ↑
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Libraries: Lenis for Smooth Scroll, GSAP for Motion -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+  </body>
+</html>

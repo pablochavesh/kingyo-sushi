@@ -1,0 +1,11 @@
+Use case: photorealistic-natural
+Asset type: premium restaurant landing-page hero, wide landscape
+Primary request: create an appetizing editorial photograph that makes sushi unmistakably the star of Kingyo Sushi & Fusión
+Scene/backdrop: dark charcoal stone counter in an intimate high-end Japanese restaurant, subtle out-of-focus warm interior behind it
+Subject: an abundant but refined chef's selection of immaculate nigiri and maki, prominently salmon and tuna, arranged on a long matte-black ceramic platter; realistic rice texture, fresh fish sheen, delicate scallion and sesame accents
+Style/medium: luxury food photography, authentic restaurant editorial, highly photorealistic
+Composition/framing: cinematic wide frame; food occupies the right two-thirds, with deep clean negative space on the left for large website headline; low table-height camera angle, shallow depth of field
+Lighting/mood: moody directional side light, warm muted gold highlights and restrained vermilion accents, rich blacks with preserved food detail
+Color palette: #0b0b0a charcoal, warm gold, salmon vermilion, natural ivory rice
+Materials/textures: matte Japanese ceramics, real stone, subtle linen napkin, one pair of dark chopsticks
+Constraints: no people, no hands, no logos, no text, no menu, no watermark, no excessive garnish, no flames, no neon, no AI surrealism; sushi must look edible and anatomically believable
